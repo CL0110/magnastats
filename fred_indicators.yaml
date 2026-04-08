@@ -1,0 +1,321 @@
+# FRED Indicators Configuration for Magnastats
+# Each series maps to a card on the /indicators page
+# good_direction: "up" means a rising value is positive, "down" means falling is positive
+
+series:
+
+  # ── Labor Market ──────────────────────────────────────────────
+
+  - series_id: JTSJOL
+    label: Job Openings
+    unit: Thousands
+    display_unit: M
+    display_divisor: 1000
+    category: Labor Market
+    description: Total nonfarm job openings, seasonally adjusted
+    source: BLS / JOLTS
+    good_direction: up
+
+  - series_id: PAYEMS
+    label: Nonfarm Payrolls
+    unit: Thousands
+    display_unit: M
+    display_divisor: 1000
+    category: Labor Market
+    description: All employees, total nonfarm, seasonally adjusted
+    source: BLS / CES
+    good_direction: up
+
+  - series_id: UNRATE
+    label: Unemployment Rate
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Labor Market
+    description: Civilian unemployment rate, seasonally adjusted
+    source: BLS / CPS
+    good_direction: down
+
+  - series_id: U6RATE
+    label: U-6 Underemployment
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Labor Market
+    description: Total unemployed plus marginally attached plus part-time for economic reasons
+    source: BLS / CPS
+    good_direction: down
+
+  - series_id: EMRATIO
+    label: Employment-Population Ratio
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Labor Market
+    description: Civilian employment-population ratio
+    source: BLS / CPS
+    good_direction: up
+
+  - series_id: CIVPART
+    label: Labor Force Participation
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Labor Market
+    description: Civilian labor force participation rate
+    source: BLS / CPS
+    good_direction: up
+
+  - series_id: CES0500000003
+    label: Avg Hourly Earnings YoY
+    unit: Dollars
+    display_unit: $
+    display_divisor: 1
+    category: Labor Market
+    description: Average hourly earnings of all employees, total private
+    source: BLS / CES
+    good_direction: up
+
+  - series_id: JTSQUR
+    label: Quits Rate
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Labor Market
+    description: Quits rate, total nonfarm, seasonally adjusted
+    source: BLS / JOLTS
+    good_direction: up
+
+  # ── Growth & Output ───────────────────────────────────────────
+
+  - series_id: A191RL1Q225SBEA
+    label: Real GDP Growth
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Growth & Output
+    description: Real GDP, percent change from preceding period, annualized
+    source: BEA / NIPA
+    good_direction: up
+
+  - series_id: INDPRO
+    label: Industrial Production
+    unit: Index 2017=100
+    display_unit: ""
+    display_divisor: 1
+    category: Growth & Output
+    description: Industrial production index, seasonally adjusted
+    source: Federal Reserve
+    good_direction: up
+
+  - series_id: RSAFS
+    label: Retail Sales
+    unit: Millions of Dollars
+    display_unit: B
+    display_divisor: 1000
+    category: Growth & Output
+    description: Advance retail sales, total, seasonally adjusted
+    source: Census Bureau
+    good_direction: up
+
+  - series_id: HOUST
+    label: Housing Starts
+    unit: Thousands of Units
+    display_unit: K
+    display_divisor: 1
+    category: Growth & Output
+    description: New privately-owned housing units started, seasonally adjusted annual rate
+    source: Census Bureau
+    good_direction: up
+
+  - series_id: PERMIT
+    label: Building Permits
+    unit: Thousands of Units
+    display_unit: K
+    display_divisor: 1
+    category: Growth & Output
+    description: New privately-owned housing units authorized by building permits, SAAR
+    source: Census Bureau
+    good_direction: up
+
+  # ── Inflation ─────────────────────────────────────────────────
+
+  - series_id: CPIAUCSL
+    label: CPI YoY
+    unit: Index 1982-84=100
+    display_unit: ""
+    display_divisor: 1
+    category: Inflation
+    description: Consumer price index for all urban consumers, seasonally adjusted
+    source: BLS
+    good_direction: down
+
+  - series_id: CPILFESL
+    label: Core CPI YoY
+    unit: Index 1982-84=100
+    display_unit: ""
+    display_divisor: 1
+    category: Inflation
+    description: CPI for all urban consumers, all items less food and energy
+    source: BLS
+    good_direction: down
+
+  - series_id: PCEPI
+    label: PCE YoY
+    unit: Index 2017=100
+    display_unit: ""
+    display_divisor: 1
+    category: Inflation
+    description: Personal consumption expenditures price index
+    source: BEA
+    good_direction: down
+
+  - series_id: PCEPILFE
+    label: Core PCE YoY
+    unit: Index 2017=100
+    display_unit: ""
+    display_divisor: 1
+    category: Inflation
+    description: PCE excluding food and energy
+    source: BEA
+    good_direction: down
+
+  - series_id: PPIACO
+    label: PPI All Commodities
+    unit: Index 1982=100
+    display_unit: ""
+    display_divisor: 1
+    category: Inflation
+    description: Producer price index, all commodities
+    source: BLS
+    good_direction: down
+
+  # ── Credit & Financial Conditions ─────────────────────────────
+
+  - series_id: DGS10
+    label: 10-Year Treasury
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Credit & Financial Conditions
+    description: Market yield on U.S. Treasury securities at 10-year constant maturity
+    source: Federal Reserve
+    good_direction: down
+
+  - series_id: DGS2
+    label: 2-Year Treasury
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Credit & Financial Conditions
+    description: Market yield on U.S. Treasury securities at 2-year constant maturity
+    source: Federal Reserve
+    good_direction: down
+
+  - series_id: T10Y2Y
+    label: 10Y–2Y Spread
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Credit & Financial Conditions
+    description: 10-year Treasury constant maturity minus 2-year constant maturity
+    source: Federal Reserve
+    good_direction: up
+
+  - series_id: DRTSCILM
+    label: SLOOS C&I Loan Standards
+    unit: Net Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Credit & Financial Conditions
+    description: >
+      Net percentage of domestic banks tightening standards for C&I loans
+      to large and middle-market firms
+    source: Federal Reserve / SLOOS
+    good_direction: down
+
+  - series_id: DRTSSP
+    label: SLOOS Consumer Loan Standards
+    unit: Net Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Credit & Financial Conditions
+    description: >
+      Net percentage of domestic banks tightening standards for consumer
+      loans (credit cards, auto, other)
+    source: Federal Reserve / SLOOS
+    good_direction: down
+
+  - series_id: BAMLH0A0HYM2
+    label: HY Credit Spread
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Credit & Financial Conditions
+    description: ICE BofA US High Yield Index option-adjusted spread
+    source: ICE / BofA
+    good_direction: down
+
+  # ── Leading Indicators ────────────────────────────────────────
+
+  - series_id: UMCSENT
+    label: Consumer Sentiment
+    unit: Index 1966:Q1=100
+    display_unit: ""
+    display_divisor: 1
+    category: Leading Indicators
+    description: University of Michigan consumer sentiment index
+    source: U. Michigan
+    good_direction: up
+
+  - series_id: NAPM
+    label: ISM Manufacturing PMI
+    unit: Index
+    display_unit: ""
+    display_divisor: 1
+    category: Leading Indicators
+    description: ISM manufacturing purchasing managers index
+    source: ISM
+    good_direction: up
+
+  - series_id: NAPMNOI
+    label: ISM New Orders
+    unit: Index
+    display_unit: ""
+    display_divisor: 1
+    category: Leading Indicators
+    description: ISM manufacturing new orders index
+    source: ISM
+    good_direction: up
+
+  - series_id: USSLIND
+    label: Leading Economic Index
+    unit: Index 2016=100
+    display_unit: ""
+    display_divisor: 1
+    category: Leading Indicators
+    description: Conference Board leading economic index
+    source: Conference Board
+    good_direction: up
+
+  # ── Fiscal ────────────────────────────────────────────────────
+
+  - series_id: MTSDS133FMS
+    label: Federal Surplus/Deficit
+    unit: Millions of Dollars
+    display_unit: B
+    display_divisor: 1000
+    category: Fiscal
+    description: Federal government current surplus or deficit
+    source: U.S. Treasury
+    good_direction: up
+
+  - series_id: GFDEBTN
+    label: Federal Debt Outstanding
+    unit: Millions of Dollars
+    display_unit: T
+    display_divisor: 1000000
+    category: Fiscal
+    description: Federal debt held by the public and intragovernmental
+    source: U.S. Treasury
+    good_direction: down

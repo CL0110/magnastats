@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import JoltsExplorer from "./JoltsExplorer.jsx";
 
 const OUTCOMES = {
   lfpr:  { label: "LFPR", calc: (d) => ((d.employed + d.unemployed) / d.pop) * 100 },
@@ -114,6 +115,8 @@ export default function DataExplorer() {
   const [national, setNational] = useState(null);
   const [dims, setDims] = useState(null);
   const [labelMap, setLabelMap] = useState(null);
+
+  const [activeTab, setActiveTab] = useState("cps");
 
   const [cutA, setCutA] = useState({ sex: "All", age_group: "All", race_eth: "All", educ: "All" });
   const [cutB, setCutB] = useState({ sex: "All", age_group: "All", race_eth: "All", educ: "All" });
@@ -259,21 +262,53 @@ export default function DataExplorer() {
     <div style={{ fontFamily: "'DM Sans', sans-serif", background: "#f0f2f5", minHeight: "100vh", color: "#1a1a2e" }}>
 
       {/* Page header */}
-      <div style={{ background: "#1a1a2e", padding: "22px 28px 20px" }}>
-        <div style={{ maxWidth: 1140, margin: "0 auto", display: "flex", alignItems: "flex-end", justifyContent: "space-between" }}>
-          <div>
-            <div style={{ fontSize: 9, fontFamily: "monospace", letterSpacing: "0.15em", color: "#E8A838", textTransform: "uppercase", marginBottom: 5 }}>Custom Tabulation Tool</div>
-            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 24, fontWeight: 700, color: "#fff", margin: "0 0 5px", letterSpacing: "-0.02em" }}>CPS Labor Market Data</h1>
-            <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 12, margin: 0, lineHeight: 1.5 }}>Build custom demographic cuts from CPS microdata, 2018–present. All data is weighted.</p>
+      <div style={{ background: "#1a1a2e", padding: "22px 28px 8px" }}>
+        <div style={{ maxWidth: 1140, margin: "0 auto" }}>
+          <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 16 }}>
+            <div>
+              <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.12em", color: "#E8A838", textTransform: "uppercase", marginBottom: 5 }}>Data Explorer</div>
+              <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 26, fontWeight: 700, color: "#fff", margin: 0, letterSpacing: "-0.02em" }}>
+                {activeTab === "cps" ? "CPS Labor Market Data" : "JOLTS — Job Openings & Turnover"}
+              </h1>
+              <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 13, margin: "4px 0 0", lineHeight: 1.5 }}>
+                {activeTab === "cps"
+                  ? "Build custom demographic cuts from CPS microdata, 2018–present."
+                  : "Explore job openings, hires, quits, and separations by industry, 2000–present."
+                }
+              </p>
+            </div>
+            {activeTab === "cps" && ran && (
+              <button onClick={() => setCollapsed((p) => !p)} style={{ padding: "7px 14px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.14)", borderRadius: 5, color: "rgba(255,255,255,0.6)", fontSize: 12, cursor: "pointer" }}>
+                {collapsed ? "◀ Show controls" : "▶ Hide controls"}
+              </button>
+            )}
           </div>
-          {ran && (
-            <button onClick={() => setCollapsed((p) => !p)} style={{ padding: "7px 14px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.14)", borderRadius: 5, color: "rgba(255,255,255,0.6)", fontSize: 11, cursor: "pointer" }}>
-              {collapsed ? "◀ Show controls" : "▶ Hide controls"}
-            </button>
-          )}
+          {/* Tabs */}
+          <div style={{ display: "flex", gap: 0 }}>
+            {[
+              { key: "cps", label: "CPS Microdata" },
+              { key: "jolts", label: "JOLTS" },
+            ].map((tab) => (
+              <button key={tab.key} onClick={() => setActiveTab(tab.key)} style={{
+                padding: "10px 20px", cursor: "pointer",
+                background: activeTab === tab.key ? "#f0f2f5" : "transparent",
+                color: activeTab === tab.key ? "#1a1a2e" : "rgba(255,255,255,0.4)",
+                border: "none",
+                borderRadius: "6px 6px 0 0",
+                fontSize: 13, fontWeight: activeTab === tab.key ? 700 : 400,
+                fontFamily: "monospace", letterSpacing: "0.04em",
+                transition: "all 0.15s",
+              }}>
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
+      {activeTab === "jolts" && <JoltsExplorer />}
+
+      {activeTab === "cps" && <>
       {/* AI Query Bar */}
       <div style={{ maxWidth: 1140, margin: "0 auto", padding: "16px 28px 0" }}>
         <div style={{ background: "#fff", borderRadius: 8, padding: "14px 18px", boxShadow: "0 1px 4px rgba(0,0,0,0.08)", display: "flex", gap: 10, alignItems: "center" }}>
@@ -445,6 +480,7 @@ export default function DataExplorer() {
           </div>
         )}
       </div>
+      </>}
     </div>
   );
 }
