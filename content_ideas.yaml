@@ -1,0 +1,230 @@
+# Magnastats Content Pipeline
+# Format: Insights = visual-forward, one chart | Analysis = deep-dive essay
+# Status: idea → drafting → ready → published
+# Priority: 1 (next up) → 2 (soon) → 3 (backlog)
+
+insights:
+
+  - title: "Is Parenting More Intense? LFPR for Mothers, 2018–2026"
+    category: Labor Force
+    data_source: CPS (has_young_child × gender × LFPR)
+    status: idea
+    priority: 1
+    notes: Clean single-chart post. Compare LFPR for women with/without young children.
+
+  - title: "Working Past 65: Where and Why"
+    category: Employment
+    data_source: CPS (age 65+ × state × EPOP)
+    status: idea
+    priority: 1
+    notes: State-level map potential. Which states have highest 65+ employment?
+
+  - title: "Who Negotiates? Gender, Education, and the Wage Gap"
+    category: Gender
+    data_source: CPS (wages × gender × education × industry)
+    status: idea
+    priority: 1
+    notes: Extends the AI Labor Market piece. Focus on high-salary occupations.
+
+  - title: "Inflation vs Growth: What Voters Actually Care About"
+    category: Macro
+    data_source: FRED CPI + GDP + Michigan consumer sentiment
+    status: idea
+    priority: 1
+    notes: Timely. Map partisan priority to actual macro data.
+
+  - title: "996: The Rise of Hustle Culture in Hours Worked"
+    category: Labor Force
+    data_source: CPS (usual_hours × industry × education)
+    status: idea
+    priority: 2
+    notes: Who's working 50+ hours? By industry and education.
+
+  - title: "Pension Funds and Elderly Poverty Reduction"
+    category: Demographics
+    data_source: CPS (EPOP/LFPR for 65+ × income proxies)
+    status: idea
+    priority: 2
+    notes: Already have age cuts in CPS explorer.
+
+  - title: "Female Leadership and Firm Performance"
+    category: Gender
+    data_source: CPS (occ_major_group × gender × wages)
+    status: idea
+    priority: 2
+    notes: Women in management occupations — wage and representation trends.
+
+  - title: "Decline of Alcohol Consumption: Who Stopped Drinking?"
+    category: Demographics
+    data_source: External + CPS age/demo context
+    status: idea
+    priority: 3
+    notes: Demographic shifts driving the trend. Pair with age cohort data.
+
+  - title: "Why There Is an Air Traffic Controller Shortage"
+    category: Employment
+    data_source: BLS OES occupation-specific data
+    status: idea
+    priority: 3
+    notes: Needs external OES pull.
+
+analysis:
+
+  - title: "The Real Wave of American Job Loss"
+    category: Labor Markets
+    data_source: JOLTS separations + CPS employment by industry/education
+    status: idea
+    priority: 1
+    notes: Which industries and demographics are actually losing jobs? Separate signal from narrative.
+
+  - title: "Shackle of Intergenerational Poverty"
+    category: Inequality
+    data_source: CPS wages × education × race × age
+    status: idea
+    priority: 1
+    notes: Education premium by race, how it compounds across generations.
+
+  - title: "Pay Transparency and Gender Pay Gap"
+    category: Labor Markets
+    data_source: CPS wages × gender × state (policy dates as treatment)
+    status: idea
+    priority: 2
+    notes: Econometric piece. Diff-in-diff using state policy rollout dates.
+
+  - title: "Will Recession Hurt or Help BNPL?"
+    category: Credit
+    data_source: FRED consumer credit + CPS income demographics
+    status: idea
+    priority: 2
+    notes: Middle/lower income stress → more BNPL usage or more defaults?
+
+  - title: "Why Colleges Cost So Much"
+    category: Education
+    data_source: FRED tuition indices + CPS education wage premium
+    status: idea
+    priority: 2
+    notes: Is the premium still worth it? Data-driven answer.
+
+  - title: "Which Industries Are Most Vulnerable to Market Cycles?"
+    category: Macro
+    data_source: CES industry employment + CPS wages by industry
+    status: idea
+    priority: 2
+    notes: Cyclical sensitivity by industry. Which sectors shed jobs first in downturns?
+
+  - title: "Do Men in High-Salary Jobs Negotiate Harder?"
+    category: Gender
+    data_source: CPS wages × gender × education × industry
+    status: idea
+    priority: 2
+    notes: Wage variance by gender at the top of the distribution.
+
+  - title: "Why Economists Call Recession Too Often"
+    category: Macro
+    data_source: NBER recession dates + FRED leading indicators
+    status: idea
+    priority: 3
+    notes: Track record of recession calls vs actual outcomes.
+
+  - title: "Increase in Medicaid Spending"
+    category: Healthcare
+    data_source: CMS data + CPS demographics
+    status: idea
+    priority: 3
+    notes: Needs external CMS data pull.
+
+  - title: "History of Technology Replacing Humans"
+    category: Technology
+    data_source: BLS historical employment by industry
+    status: idea
+    priority: 3
+    notes: Long-run perspective. Each wave of automation and what actually happened to jobs.
+
+  - title: "Is Quant Investing Superior to Traditional Strategies?"
+    category: Markets
+    data_source: External fund performance data + FRED market indices
+    status: idea
+    priority: 3
+    notes: Needs hedge fund return data. Compare risk-adjusted returns.
+
+  - title: "Main Drivers of Stock Market: Technical, Momentum, Sentiment"
+    category: Markets
+    data_source: FRED market indices + Michigan sentiment + VIX
+    status: idea
+    priority: 3
+    notes: Decompose market moves by driver type.
+
+# ─── Not for Magnastats (personal blog / other projects) ──────────
+# These are good ideas but not data-driven macro research:
+#
+# - Dopamine Break
+# - How I Used ChatGPT as My Therapist
+# - Physical vs Digital Notebook
+# - The Immense Burden of Tab Switching
+# - Why More Isn't Better (Digital Clutter)
+# - Tired but Wired: How to Relax in the Digital Era
+# - Can You Teach a Child to Be Hungry When Well-Fed?
+# - Parenting in the Age of Over-Consumption
+# - Mom, You Need a Plan
+# - How Setbacks Help Us
+# - Finding Order in This World
+# - The Year I Kicked My Procrastination Habit
+# - Why People Want Role Models More Than Ever
+# - Making Peace with Misery and Discomfort
+# - Getting Over Nervousness of Putting Ideas Out There
+# - Close Your Eyes: Protect Yourself in the Age of Abundance
+# - How Having Digital Gadgets Hurt Productivity
+# - Planning Fallacy: Why People Underestimate Time
+# - Epistemic Shell and True Digital Divide in Learning
+# - Review Is Cognitively Expensive
+# - What AI Can't Do (#1 and #2)
+# - Guess Which Article Is Written by AI
+# - Tell Me How Your TEAM Gained Efficiency Using ChatGPT
+# - My Strengths as a Worker
+# - Listening In
+# - Can Consulting Survive in the Age of AI?
+# - AI Will Move at Human Speed, Not AI Speed
+# - Mediocre Trap: AI-Generated Content Ceiling
+# - Challenge: AI Will Free Humans for Creative Work
+# - Why People Underestimate Task Completion Time
+# - Does Bill Gates Submit an IT Ticket?
+# - Is Making a Joke an Intelligent Human Skill?
+# - AI LLM Error: Not a Bug but a Feature
+# - Why More Creative Work Is Done by AI While Drudgery Is Left for Humans
+# - Identity + Career (Interview Series)
+# - What's a Perfect Day Look Like
+# - How Exactly Networking Helps in Career Search
+# - The Privilege of Being Questioned
+# - How Can We Stay Competitive While Being Grateful
+# - How Do You Switch Between Big Pursuits and Appreciating Small Things
+# - Epistemic Community and Language (Technical Jargons)
+# - 2022, The Year of Impossible
+# - Products We Are Building and Problems Left Behind
+# - How Identity Impacts Career Decisions
+# - Digital Life Is Getting Overwhelming
+# - Intergenerational Resentment (Millennials/Gen Z vs Boomers)
+# - What People Have in Common Who Respect Their Parents
+# - Mentra: Warren Buffett's Golden Son
+# - New Media Moving Toward Images and Presentation
+#
+# ─── Business/App Ideas (separate from content) ───────────────────
+# - AI Investment Analyst Bot
+# - SuperPartners (household chore management)
+# - Neighborhood Clean Up Board
+# - Fragility Watch (anomaly detection)
+# - Standing Up Agenda Book / Mouse Pad Agenda
+# - Idea Generator and Editor
+# - Online Editing Tool (Collabora + SEO + Images + Lit Review)
+# - Habit Tracker + Calendar
+# - Planner MVP
+# - Vision Board
+# - Productivity & Household Management Concierge
+# - Medical Tourism to South Korea
+# - Skillup Experience Vacationing
+# - 옥동식 국밥집
+#
+# ─── Video/Other Format ───────────────────────────────────────────
+# - How to Learn Anything for Free (Python/Jupyter tutorial)
+# - VaR in Excel vs Python (video)
+# - Finance Bro Article (published)
+# - Economic History of Tech and Labor Market Disruption (book project)

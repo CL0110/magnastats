@@ -298,6 +298,80 @@ series:
     source: Conference Board
     good_direction: up
 
+  # ── Monetary Policy ────────────────────────────────────────────
+
+  - series_id: FEDFUNDS
+    label: Fed Funds Rate
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Monetary Policy
+    description: Effective federal funds rate
+    source: Federal Reserve
+    good_direction: down
+
+  - series_id: T10YIE
+    label: 10Y Breakeven Inflation
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Monetary Policy
+    description: 10-year breakeven inflation rate — market expectation of avg CPI over next 10 years
+    source: Federal Reserve
+    good_direction: down
+
+  - series_id: MORTGAGE30US
+    label: 30-Year Mortgage Rate
+    unit: Percent
+    display_unit: "%"
+    display_divisor: 1
+    category: Monetary Policy
+    description: 30-year fixed-rate mortgage average
+    source: Freddie Mac
+    good_direction: down
+
+  # ── High-Frequency / Market ──────────────────────────────────
+
+  - series_id: ICSA
+    label: Initial Jobless Claims
+    unit: Number
+    display_unit: K
+    display_divisor: 1
+    category: High-Frequency
+    description: Initial claims for unemployment insurance, seasonally adjusted
+    source: DOL / ETA
+    good_direction: down
+
+  - series_id: CCSA
+    label: Continuing Claims
+    unit: Number
+    display_unit: M
+    display_divisor: 1000
+    category: High-Frequency
+    description: Insured unemployment (continuing claims), seasonally adjusted
+    source: DOL / ETA
+    good_direction: down
+
+  - series_id: DCOILWTICO
+    label: WTI Crude Oil
+    unit: Dollars per Barrel
+    display_unit: $
+    display_divisor: 1
+    category: High-Frequency
+    description: Crude oil prices, West Texas Intermediate
+    source: EIA
+    good_direction: down
+
+  - series_id: VIXCLS
+    label: VIX
+    unit: Index
+    display_unit: ""
+    display_divisor: 1
+    category: High-Frequency
+    description: CBOE volatility index — market expectation of 30-day S&P 500 volatility
+    source: CBOE
+    good_direction: down
+
   # ── Fiscal ────────────────────────────────────────────────────
 
   - series_id: MTSDS133FMS

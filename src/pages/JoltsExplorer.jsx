@@ -194,7 +194,7 @@ export default function JoltsExplorer() {
 
           {/* Data Element */}
           <div style={{ background: "#fff", borderRadius: 7, padding: 14, marginBottom: 10, boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
-            <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.1em", color: "#E8A838", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Data Element</div>
+            <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.1em", color: "#C5A044", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Data Element</div>
             {Object.entries(DATA_ELEMENTS).map(([k, v]) => (
               <div key={k} onClick={() => setDataelement(k)} style={{
                 padding: "7px 9px", borderRadius: 4, marginBottom: 3, cursor: "pointer",
@@ -211,7 +211,7 @@ export default function JoltsExplorer() {
 
           {/* Rate vs Level */}
           <div style={{ background: "#fff", borderRadius: 7, padding: 14, marginBottom: 10, boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
-            <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.1em", color: "#E8A838", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Measure</div>
+            <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.1em", color: "#C5A044", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Measure</div>
             <div style={{ display: "flex", gap: 6 }}>
               {Object.entries(RATE_LEVEL).map(([k, v]) => (
                 <Chip key={k} label={v.label} active={rateLevel === k} color="#2563eb" onClick={() => setRateLevel(k)} />
@@ -221,7 +221,7 @@ export default function JoltsExplorer() {
 
           {/* Industry */}
           <div style={{ background: "#fff", borderRadius: 7, padding: 14, marginBottom: 10, boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
-            <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.1em", color: "#E8A838", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Industry</div>
+            <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.1em", color: "#C5A044", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Industry</div>
             <select
               value={industry}
               onChange={(e) => setIndustry(e.target.value)}
@@ -236,7 +236,7 @@ export default function JoltsExplorer() {
 
           {/* Size Class */}
           <div style={{ background: "#fff", borderRadius: 7, padding: 14, marginBottom: 10, boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
-            <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.1em", color: "#E8A838", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Establishment Size</div>
+            <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.1em", color: "#C5A044", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Establishment Size</div>
             <select
               value={sizeclass}
               onChange={(e) => setSizeclass(e.target.value)}
@@ -251,7 +251,7 @@ export default function JoltsExplorer() {
 
           {/* Compare mode */}
           <div style={{ background: "#fff", borderRadius: 7, padding: 14, marginBottom: 10, boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
-            <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.1em", color: "#E8A838", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Compare</div>
+            <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.1em", color: "#C5A044", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Compare</div>
             <div style={{ display: "flex", gap: 4, flexWrap: "wrap", marginBottom: 10 }}>
               <Chip label="None" active={compareMode === "none"} color="#6b7280" onClick={() => { setCompareMode("none"); setCompareValues([]); }} />
               <Chip label="By Industry" active={compareMode === "industry"} color="#2563eb" onClick={() => { setCompareMode("industry"); setCompareValues([]); }} />
@@ -315,13 +315,13 @@ export default function JoltsExplorer() {
           <div>
             {/* Active query bar */}
             <div style={{ background: "#1a1a2e", borderRadius: "7px 7px 0 0", padding: "11px 16px" }}>
-              <div style={{ fontSize: 10, fontFamily: "monospace", color: "#E8A838", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 3 }}>Active Query</div>
+              <div style={{ fontSize: 10, fontFamily: "monospace", color: "#C5A044", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 3 }}>Active Query</div>
               <div style={{ color: "#fff", fontSize: 13, fontWeight: 600 }}>
                 {compKeys.length > 0
                   ? compKeys.map((k) => getLabel(compareMode, k)).join(" vs ")
                   : `${DATA_ELEMENTS[dataelement]?.label || dataelement} — ${industry === "All" ? "Total Nonfarm" : labelMap.industry[industry]}`
                 }
-                <span style={{ color: "rgba(255,255,255,0.35)", fontWeight: 400, marginLeft: 10 }}>
+                <span style={{ color: "rgba(255,255,255,0.6)", fontWeight: 400, marginLeft: 10 }}>
                   · {RATE_LEVEL[rateLevel].label} · 2000–present
                 </span>
               </div>
@@ -362,7 +362,7 @@ export default function JoltsExplorer() {
             {topLines.length > 0 && (
               <div style={{ background: "#fff", borderTop: "1px solid #f3f4f6", borderRadius: "0 0 7px 7px", boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
                 <div style={{ padding: "10px 16px 8px", borderBottom: "1px solid #f3f4f6" }}>
-                  <div style={{ fontSize: 10, fontFamily: "monospace", letterSpacing: "0.12em", color: "#E8A838", textTransform: "uppercase", fontWeight: 600 }}>Summary</div>
+                  <div style={{ fontSize: 10, fontFamily: "monospace", letterSpacing: "0.12em", color: "#C5A044", textTransform: "uppercase", fontWeight: 600 }}>Summary</div>
                 </div>
                 {topLines.map((l, i) => (
                   <div key={i} style={{ display: "flex", gap: 11, alignItems: "flex-start", padding: "10px 16px", background: i % 2 === 0 ? "#fafafa" : "#fff", borderLeft: i === 0 ? "3px solid #2563eb" : "3px solid transparent" }}>

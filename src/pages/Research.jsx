@@ -25,13 +25,13 @@ export default function Research() {
       {/* Header */}
       <div style={{ background: "var(--ink)", padding: "40px 28px 36px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <div style={{ fontSize: 9, fontFamily: "'DM Mono', monospace", letterSpacing: "0.2em", color: "var(--accent)", textTransform: "uppercase", marginBottom: 12 }}>
+          <div style={{ fontSize: 13, fontFamily: "'DM Mono', monospace", letterSpacing: "0.14em", color: "var(--accent)", textTransform: "uppercase", marginBottom: 12 }}>
             Working Papers & Data Essays
           </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 700, color: "var(--white)", marginBottom: 12, letterSpacing: "-0.02em" }}>
+          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 34, fontWeight: 700, color: "var(--white)", marginBottom: 12, letterSpacing: "-0.02em" }}>
             Research
           </h1>
-          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", lineHeight: 1.7, maxWidth: 520 }}>
+          <p style={{ fontSize: 15, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, maxWidth: 520 }}>
             Original analytical pieces built on public microdata. Each has a question, a finding, and an argument.
           </p>
         </div>

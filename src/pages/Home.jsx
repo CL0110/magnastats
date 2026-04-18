@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const SNAPSHOT = [
   { label: "Macro Regime",      value: "Goldilocks",  delta: "81% confidence",  color: "#4ade80", up: null },
   { label: "EPOP (Prime Age)",  value: "80.7%",       delta: "+0.2 pts MoM",    color: "#4A90C4", up: true },
-  { label: "Unemployment Rate", value: "4.1%",        delta: "Unchanged",       color: "#E8A838", up: null },
+  { label: "Unemployment Rate", value: "4.1%",        delta: "Unchanged",       color: "#C5A044", up: null },
   { label: "LFPR",              value: "62.5%",       delta: "−0.1 pts MoM",    color: "#2AA89A", up: false },
   { label: "CPI YoY",           value: "2.4%",        delta: "−0.3 pts MoM",    color: "#a78bfa", up: false },
   { label: "10Y−2Y Spread",     value: "+0.38%",      delta: "Re-steepened",    color: "#f97316", up: true },
@@ -29,7 +29,7 @@ const SECTIONS = [
     label: "Research",
     tag: "ANALYSIS",
     desc: "Original data essays with a thesis, a finding, and an argument — not just a chart.",
-    accent: "#E8A838",
+    accent: "#C5A044",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function Home() {
           </h1>
           <p style={{
             fontSize: 17, lineHeight: 1.75,
-            color: "rgba(255,255,255,0.45)",
+            color: "rgba(255,255,255,0.65)",
             maxWidth: 560, marginBottom: 36,
           }}>
             CPS microdata tabulation, macro regime classification, and original data essays — built on public data, with an editorial voice.

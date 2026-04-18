@@ -2,10 +2,11 @@ import { NavLink } from "react-router-dom";
 
 const NAV_ITEMS = [
   { label: "Home",          to: "/" },
-  { label: "Macro Metrics", to: "/indicators" },
+  { label: "Indicators", to: "/indicators" },
   { label: "Data Explorer", to: "/data" },
-  { label: "Research",      to: "/research" },
-  { label: "Contact",       to: "/contact" },
+  { label: "Insights",      to: "/insights" },
+  { label: "Analysis",      to: "/research" },
+  { label: "About",         to: "/about" },
 ];
 
 export default function Nav() {
@@ -22,13 +23,8 @@ export default function Nav() {
         height: 52,
       }}>
         {/* Wordmark */}
-        <NavLink to="/" style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-            <polygon points="11,1 21,6 21,16 11,21 1,16 1,6" fill="none" stroke="#E8A838" strokeWidth="1.5"/>
-            <rect x="5" y="14" width="2.5" height="5" fill="#E8A838" opacity="0.9"/>
-            <rect x="9.75" y="10" width="2.5" height="9" fill="#E8A838" opacity="0.7"/>
-            <rect x="14.5" y="7" width="2.5" height="12" fill="#E8A838" opacity="0.5"/>
-          </svg>
+        <NavLink to="/" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <img src={import.meta.env.BASE_URL + "favicon.svg"} alt="" style={{ width: 22, height: 22 }} />
           <span style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: 18, fontWeight: 700,

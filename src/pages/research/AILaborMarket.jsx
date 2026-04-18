@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const C = {
   navy: "#0D1B2A", ink: "#1A2B3C", steel: "#2C4A6E",
-  accent: "#E8A838", muted: "#6B7F96", fog: "#E4EBF2",
+  accent: "#C5A044", muted: "#6B7F96", fog: "#E4EBF2",
   mist: "#F0F4F8", white: "#FFFFFF", text: "#1A2B3C",
 };
 
@@ -39,7 +39,7 @@ export default function AILaborMarket() {
       {/* Header */}
       <div style={{ background: C.ink, padding: "48px 28px 40px", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div style={{ maxWidth: 740, margin: "0 auto" }}>
-          <Link to="/research" style={{ fontSize: 11, fontFamily: "'DM Mono', monospace", color: "rgba(255,255,255,0.35)", letterSpacing: "0.1em", display: "inline-block", marginBottom: 20 }}>← RESEARCH</Link>
+          <Link to="/research" style={{ fontSize: 11, fontFamily: "'DM Mono', monospace", color: "rgba(255,255,255,0.6)", letterSpacing: "0.1em", display: "inline-block", marginBottom: 20 }}>← RESEARCH</Link>
           <div style={{ display: "flex", gap: 10, marginBottom: 16, flexWrap: "wrap" }}>
             <span style={{ fontSize: 9, fontFamily: "'DM Mono', monospace", letterSpacing: "0.14em", color: C.accent, textTransform: "uppercase", fontWeight: 600 }}>Labor Markets</span>
             <span style={{ fontSize: 9, color: "rgba(255,255,255,0.25)", fontFamily: "'DM Mono', monospace" }}>· April 2026</span>
@@ -47,7 +47,7 @@ export default function AILaborMarket() {
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(24px, 3.5vw, 36px)", fontWeight: 700, color: C.white, lineHeight: 1.2, marginBottom: 18, letterSpacing: "-0.02em" }}>
             Who's Winning the AI Economy?<br />A CPS Deep Dive.
           </h1>
-          <p style={{ fontSize: 15, lineHeight: 1.75, color: "rgba(255,255,255,0.45)", maxWidth: 580, marginBottom: 24 }}>
+          <p style={{ fontSize: 15, lineHeight: 1.75, color: "rgba(255,255,255,0.65)", maxWidth: 580, marginBottom: 24 }}>
             Displacement and disruption are the wrong frame. The AI boom is producing a skewed distribution of gains — concentrated in college-educated men in knowledge-economy states, widening fastest in finance.
           </p>
           <div style={{ fontSize: 10, fontFamily: "'DM Mono', monospace", color: "rgba(255,255,255,0.2)" }}>
@@ -99,7 +99,7 @@ export default function AILaborMarket() {
             {[
               { sector: "Finance / Insurance",          change: "+31%", dollars: "+$7,800/yr", note: "Senior compensation structures, performance fees, equity upside", color: "#f97316" },
               { sector: "Health / Social",               change: "+29%", dollars: "+$4,800/yr", note: "Male physicians and administrators pulling away from female-dominated roles", color: "#f97316" },
-              { sector: "Professional / Scientific / Tech", change: "+9%",  dollars: "+$2,100/yr", note: "More standardized pay structures limiting divergence", color: "#E8A838" },
+              { sector: "Professional / Scientific / Tech", change: "+9%",  dollars: "+$2,100/yr", note: "More standardized pay structures limiting divergence", color: "#C5A044" },
               { sector: "Education",                    change: "−10%", dollars: "−$950/yr",  note: "Public-sector pay scales and collective bargaining insulate this sector", color: "#4ade80" },
             ].map((r, i) => (
               <div key={i} style={{ display: "grid", gridTemplateColumns: "1fr 80px 100px", gap: 16, alignItems: "center", padding: "14px 20px", borderBottom: i < 3 ? `1px solid ${C.fog}` : "none", background: i % 2 === 0 ? C.white : C.mist }}>

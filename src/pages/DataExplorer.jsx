@@ -258,53 +258,53 @@ export default function DataExplorer() {
   const labelA = cutLabel(cutA, labelMap);
   const labelB = cutLabel(cutB, labelMap);
 
-  return (
-    <div style={{ fontFamily: "'DM Sans', sans-serif", background: "#f0f2f5", minHeight: "100vh", color: "#1a1a2e" }}>
+  const TABS = [
+    { key: "cps", label: "CPS Microdata", icon: "◈", desc: "Demographics · 2018–present" },
+    { key: "jolts", label: "JOLTS", icon: "◉", desc: "Openings & turnover · 2000–present" },
+  ];
 
-      {/* Page header */}
-      <div style={{ background: "#1a1a2e", padding: "22px 28px 8px" }}>
-        <div style={{ maxWidth: 1140, margin: "0 auto" }}>
-          <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 16 }}>
-            <div>
-              <div style={{ fontSize: 11, fontFamily: "monospace", letterSpacing: "0.12em", color: "#E8A838", textTransform: "uppercase", marginBottom: 5 }}>Data Explorer</div>
-              <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 26, fontWeight: 700, color: "#fff", margin: 0, letterSpacing: "-0.02em" }}>
-                {activeTab === "cps" ? "CPS Labor Market Data" : "JOLTS — Job Openings & Turnover"}
-              </h1>
-              <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 13, margin: "4px 0 0", lineHeight: 1.5 }}>
-                {activeTab === "cps"
-                  ? "Build custom demographic cuts from CPS microdata, 2018–present."
-                  : "Explore job openings, hires, quits, and separations by industry, 2000–present."
-                }
-              </p>
-            </div>
-            {activeTab === "cps" && ran && (
-              <button onClick={() => setCollapsed((p) => !p)} style={{ padding: "7px 14px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.14)", borderRadius: 5, color: "rgba(255,255,255,0.6)", fontSize: 12, cursor: "pointer" }}>
-                {collapsed ? "◀ Show controls" : "▶ Hide controls"}
-              </button>
-            )}
+  return (
+    <div style={{ fontFamily: "'DM Sans', sans-serif", background: "#f0f2f5", minHeight: "100vh", color: "#1a1a2e", display: "flex" }}>
+
+      {/* Left sidebar nav */}
+      <div style={{
+        width: 220, flexShrink: 0, background: "#1a1a2e",
+        padding: "24px 0", display: "flex", flexDirection: "column",
+        position: "sticky", top: 52, height: "calc(100vh - 52px)", overflowY: "auto",
+      }}>
+        <div style={{ padding: "0 20px", marginBottom: 24 }}>
+          <div style={{ fontSize: 13, fontFamily: "monospace", letterSpacing: "0.12em", color: "#C5A044", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>
+            Data Explorer
           </div>
-          {/* Tabs */}
-          <div style={{ display: "flex", gap: 0 }}>
-            {[
-              { key: "cps", label: "CPS Microdata" },
-              { key: "jolts", label: "JOLTS" },
-            ].map((tab) => (
-              <button key={tab.key} onClick={() => setActiveTab(tab.key)} style={{
-                padding: "10px 20px", cursor: "pointer",
-                background: activeTab === tab.key ? "#f0f2f5" : "transparent",
-                color: activeTab === tab.key ? "#1a1a2e" : "rgba(255,255,255,0.4)",
-                border: "none",
-                borderRadius: "6px 6px 0 0",
-                fontSize: 13, fontWeight: activeTab === tab.key ? 700 : 400,
-                fontFamily: "monospace", letterSpacing: "0.04em",
-                transition: "all 0.15s",
-              }}>
-                {tab.label}
-              </button>
-            ))}
+          <div style={{ fontSize: 12, fontFamily: "monospace", color: "rgba(255,255,255,0.5)" }}>
+            Public microdata tools
           </div>
         </div>
+        {TABS.map((tab) => {
+          const active = activeTab === tab.key;
+          return (
+            <button key={tab.key} onClick={() => setActiveTab(tab.key)} style={{
+              display: "flex", alignItems: "center", gap: 10,
+              padding: "12px 20px", cursor: "pointer",
+              background: active ? "rgba(255,255,255,0.08)" : "transparent",
+              borderLeft: active ? "3px solid #C5A044" : "3px solid transparent",
+              border: "none", borderLeft: active ? "3px solid #C5A044" : "3px solid transparent",
+              color: active ? "#fff" : "rgba(255,255,255,0.8)",
+              textAlign: "left", width: "100%",
+              transition: "all 0.15s",
+            }}>
+              <span style={{ fontSize: 18, opacity: active ? 1 : 0.6 }}>{tab.icon}</span>
+              <div>
+                <div style={{ fontSize: 15, fontWeight: active ? 700 : 500, fontFamily: "monospace" }}>{tab.label}</div>
+                <div style={{ fontSize: 11, color: active ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.45)", fontFamily: "monospace", marginTop: 2 }}>{tab.desc}</div>
+              </div>
+            </button>
+          );
+        })}
       </div>
+
+      {/* Main content */}
+      <div style={{ flex: 1, minWidth: 0 }}>
 
       {activeTab === "jolts" && <JoltsExplorer />}
 
@@ -359,7 +359,7 @@ export default function DataExplorer() {
 
           {/* Outcome */}
           <div style={{ background: "#fff", borderRadius: 7, padding: 14, marginBottom: 10, boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
-            <div style={{ fontSize: 9, fontFamily: "monospace", letterSpacing: "0.12em", color: "#E8A838", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Outcome Variable</div>
+            <div style={{ fontSize: 9, fontFamily: "monospace", letterSpacing: "0.12em", color: "#C5A044", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>Outcome Variable</div>
             {Object.entries(OUTCOMES).map(([k, v]) => (
               <div key={k} onClick={() => setOutcome(k)} style={{
                 padding: "7px 9px", borderRadius: 4, marginBottom: 3, cursor: "pointer",
@@ -368,7 +368,7 @@ export default function DataExplorer() {
                 fontSize: 12, fontWeight: outcome === k ? 600 : 400,
                 display: "flex", alignItems: "center", gap: 7,
               }}>
-                <span style={{ width: 5, height: 5, borderRadius: "50%", background: outcome === k ? "#E8A838" : "#e5e7eb", flexShrink: 0 }} />
+                <span style={{ width: 5, height: 5, borderRadius: "50%", background: outcome === k ? "#C5A044" : "#e5e7eb", flexShrink: 0 }} />
                 {v.label}
               </div>
             ))}
@@ -408,7 +408,7 @@ export default function DataExplorer() {
             {/* Active query bar */}
             <div style={{ background: "#1a1a2e", borderRadius: "7px 7px 0 0", padding: "11px 16px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
               <div>
-                <div style={{ fontSize: 9, fontFamily: "monospace", color: "#E8A838", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 3 }}>Active Query</div>
+                <div style={{ fontSize: 9, fontFamily: "monospace", color: "#C5A044", textTransform: "uppercase", letterSpacing: "0.12em", marginBottom: 3 }}>Active Query</div>
                 <div style={{ color: "#fff", fontSize: 12, fontWeight: 600, display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
                   <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
                     <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLORS.a }} />{labelA}
@@ -461,7 +461,7 @@ export default function DataExplorer() {
             {/* Top lines */}
             <div style={{ background: "#fff", borderTop: "1px solid #f3f4f6", borderRadius: "0 0 7px 7px", boxShadow: "0 1px 3px rgba(0,0,0,0.06)" }}>
               <div style={{ padding: "10px 16px 8px", borderBottom: "1px solid #f3f4f6", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                <div style={{ fontSize: 9, fontFamily: "monospace", letterSpacing: "0.12em", color: "#E8A838", textTransform: "uppercase", fontWeight: 600 }}>Summary Statistics</div>
+                <div style={{ fontSize: 9, fontFamily: "monospace", letterSpacing: "0.12em", color: "#C5A044", textTransform: "uppercase", fontWeight: 600 }}>Summary Statistics</div>
                 <div style={{ fontSize: 10, color: "#9ca3af", fontStyle: "italic" }}>Computed from query · weighted estimates</div>
               </div>
               <div style={{ display: "flex", flexWrap: "wrap" }}>
@@ -481,6 +481,7 @@ export default function DataExplorer() {
         )}
       </div>
       </>}
+      </div>
     </div>
   );
 }

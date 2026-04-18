@@ -8,7 +8,9 @@ const CAT_COLORS = {
   "Growth & Output": "#16a34a",
   "Inflation": "#ea580c",
   "Credit & Financial Conditions": "#7c3aed",
+  "Monetary Policy": "#0891b2",
   "Leading Indicators": "#ca8a04",
+  "High-Frequency": "#be185d",
   "Fiscal": "#6b7280",
 };
 
@@ -56,6 +58,21 @@ function Sparkline({ data, color }) {
   );
 }
 
+function downloadCSV(ind) {
+  const header = "date,value\n";
+  const rows = ind.history
+    .filter((d) => d.value != null)
+    .map((d) => `${d.date},${d.value}`)
+    .join("\n");
+  const blob = new Blob([header + rows], { type: "text/csv" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${ind.series_id}_${ind.label.replace(/\s+/g, "_")}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 function IndicatorCard({ ind, catColor }) {
   return (
     <div style={{
@@ -81,12 +98,28 @@ function IndicatorCard({ ind, catColor }) {
       {/* Sparkline */}
       <Sparkline data={ind.history} color={catColor} />
 
-      {/* Changes */}
-      <div style={{ display: "flex", gap: 12, alignItems: "center", marginTop: 2 }}>
-        <div style={{ fontSize: 11, color: "#9ca3af" }}>MoM</div>
-        <ChangeTag value={ind.mom_change} goodDirection={ind.good_direction} />
-        <div style={{ fontSize: 11, color: "#9ca3af", marginLeft: 6 }}>YoY</div>
-        <ChangeTag value={ind.yoy_change} goodDirection={ind.good_direction} />
+      {/* Changes + Download */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 2 }}>
+        <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+          <div style={{ fontSize: 11, color: "#9ca3af" }}>MoM</div>
+          <ChangeTag value={ind.mom_change} goodDirection={ind.good_direction} />
+          <div style={{ fontSize: 11, color: "#9ca3af", marginLeft: 6 }}>YoY</div>
+          <ChangeTag value={ind.yoy_change} goodDirection={ind.good_direction} />
+        </div>
+        <button
+          onClick={() => downloadCSV(ind)}
+          style={{
+            background: "none", border: "none", cursor: "pointer",
+            fontSize: 11, fontFamily: "monospace", color: catColor,
+            opacity: 0.6, padding: "2px 4px",
+            transition: "opacity 0.15s",
+          }}
+          onMouseEnter={(e) => e.currentTarget.style.opacity = 1}
+          onMouseLeave={(e) => e.currentTarget.style.opacity = 0.6}
+          title="Download CSV"
+        >
+          ↓ CSV
+        </button>
       </div>
 
       {/* Description */}
@@ -116,94 +149,109 @@ export default function Indicators() {
 
   const categoryOrder = [
     "Labor Market", "Growth & Output", "Inflation",
-    "Credit & Financial Conditions", "Leading Indicators", "Fiscal",
+    "Monetary Policy", "Credit & Financial Conditions",
+    "Leading Indicators", "High-Frequency", "Fiscal",
+  ];
+
+  const TABS = [
+    { key: "indicators", label: "Macro Indicators", icon: "◈", desc: "FRED series dashboard" },
+    { key: "regimes", label: "Regime Classification", icon: "◉", desc: "6-state HMM" },
   ];
 
   return (
-    <div style={{ background: "#f0f2f5", minHeight: "100vh", color: "#1a1a2e" }}>
+    <div style={{ background: "#f0f2f5", minHeight: "100vh", color: "#1a1a2e", display: "flex" }}>
 
-      {/* Header with tabs */}
-      <div style={{ background: "#1a1a2e", padding: "28px 28px 8px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ fontSize: 12, fontFamily: "monospace", letterSpacing: "0.12em", color: "#E8A838", textTransform: "uppercase", marginBottom: 8 }}>
-            Macro Dashboard · Updated {data.generated}
+      {/* Left sidebar nav */}
+      <div style={{
+        width: 220, flexShrink: 0, background: "#1a1a2e",
+        padding: "24px 0", display: "flex", flexDirection: "column",
+        position: "sticky", top: 52, height: "calc(100vh - 52px)", overflowY: "auto",
+      }}>
+        <div style={{ padding: "0 20px", marginBottom: 24 }}>
+          <div style={{ fontSize: 13, fontFamily: "monospace", letterSpacing: "0.12em", color: "#C5A044", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>
+            Indicators
           </div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 30, fontWeight: 700, color: "#fff", margin: "0 0 8px" }}>
-            {activeTab === "indicators" ? "Macro Indicators" : "Regime Classification"}
-          </h1>
-          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 14, margin: "0 0 16px", lineHeight: 1.5 }}>
-            {activeTab === "indicators"
-              ? `${data.indicators.length} indicators across ${categoryOrder.length} categories, sourced from FRED.`
-              : "6-state HMM trained on FRED + CPS education-based distributional spreads."
-            }
-          </p>
-          {/* Tabs */}
-          <div style={{ display: "flex", gap: 0 }}>
-            {[
-              { key: "indicators", label: "Indicators" },
-              { key: "regimes", label: "Regime Classification" },
-            ].map((tab) => (
-              <button key={tab.key} onClick={() => setActiveTab(tab.key)} style={{
-                padding: "10px 20px", cursor: "pointer",
-                background: activeTab === tab.key ? "#f0f2f5" : "transparent",
-                color: activeTab === tab.key ? "#1a1a2e" : "rgba(255,255,255,0.4)",
-                border: "none",
-                borderRadius: "6px 6px 0 0",
-                fontSize: 13, fontWeight: activeTab === tab.key ? 700 : 400,
-                fontFamily: "monospace", letterSpacing: "0.04em",
-                transition: "all 0.15s",
-              }}>
-                {tab.label}
-              </button>
-            ))}
+          <div style={{ fontSize: 12, fontFamily: "monospace", color: "rgba(255,255,255,0.5)" }}>
+            Updated {data.generated}
           </div>
         </div>
-      </div>
-
-      {/* Regime Classification tab */}
-      {activeTab === "regimes" && <MacroMetrics />}
-
-      {/* Indicators tab */}
-      {activeTab === "indicators" && <>
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 28px" }}>
-        {categoryOrder.map((cat) => {
-          const indicators = data.categories[cat];
-          if (!indicators || indicators.length === 0) return null;
-          const catColor = CAT_COLORS[cat] || "#6b7280";
+        {TABS.map((tab) => {
+          const active = activeTab === tab.key;
           return (
-            <div key={cat} style={{ marginBottom: 40 }}>
-              <div style={{
-                fontSize: 13, fontFamily: "monospace", letterSpacing: "0.12em",
-                color: catColor, textTransform: "uppercase", fontWeight: 700,
-                marginBottom: 16, paddingBottom: 8,
-                borderBottom: `2px solid ${catColor}22`,
-              }}>
-                {cat}
+            <button key={tab.key} onClick={() => setActiveTab(tab.key)} style={{
+              display: "flex", alignItems: "center", gap: 10,
+              padding: "12px 20px", cursor: "pointer",
+              background: active ? "rgba(255,255,255,0.08)" : "transparent",
+              borderLeft: active ? "3px solid #C5A044" : "3px solid transparent",
+              border: "none", borderLeft: active ? "3px solid #C5A044" : "3px solid transparent",
+              color: active ? "#fff" : "rgba(255,255,255,0.8)",
+              textAlign: "left", width: "100%",
+              transition: "all 0.15s",
+            }}>
+              <span style={{ fontSize: 18, opacity: active ? 1 : 0.6 }}>{tab.icon}</span>
+              <div>
+                <div style={{ fontSize: 15, fontWeight: active ? 700 : 500, fontFamily: "monospace" }}>{tab.label}</div>
+                <div style={{ fontSize: 11, color: active ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.45)", fontFamily: "monospace", marginTop: 2 }}>{tab.desc}</div>
               </div>
-              <div style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-                gap: 16,
-              }}>
-                {indicators.map((ind) => (
-                  <IndicatorCard key={ind.series_id} ind={ind} catColor={catColor} />
-                ))}
-              </div>
-            </div>
+            </button>
           );
         })}
       </div>
-      </>}
 
-      {/* Footer */}
-      <div style={{ borderTop: "1px solid #e5e7eb", padding: "20px 28px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-          <span style={{ fontSize: 12, color: "#9ca3af", fontFamily: "monospace" }}>
-            Data sourced from FRED (Federal Reserve Economic Data) · Updated monthly
-          </span>
-          <span style={{ fontSize: 12, color: "#9ca3af", fontFamily: "monospace" }}>
-            Generated {data.generated}
-          </span>
+      {/* Main content */}
+      <div style={{ flex: 1, minWidth: 0 }}>
+
+        {/* Regime Classification */}
+        {activeTab === "regimes" && <MacroMetrics />}
+
+        {/* Indicators */}
+        {activeTab === "indicators" && (
+          <div style={{ maxWidth: 1200, padding: "32px 28px" }}>
+            <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: 30, fontWeight: 700, color: "#1a1a2e", margin: "0 0 8px" }}>
+              Macro Indicators
+            </h1>
+            <p style={{ fontSize: 15, color: "#6b7280", margin: "0 0 32px", lineHeight: 1.5 }}>
+              {data.indicators.length} indicators across {categoryOrder.length} categories, sourced from FRED.
+            </p>
+            {categoryOrder.map((cat) => {
+              const indicators = data.categories[cat];
+              if (!indicators || indicators.length === 0) return null;
+              const catColor = CAT_COLORS[cat] || "#6b7280";
+              return (
+                <div key={cat} style={{ marginBottom: 40 }}>
+                  <div style={{
+                    fontSize: 13, fontFamily: "monospace", letterSpacing: "0.12em",
+                    color: catColor, textTransform: "uppercase", fontWeight: 700,
+                    marginBottom: 16, paddingBottom: 8,
+                    borderBottom: `2px solid ${catColor}22`,
+                  }}>
+                    {cat}
+                  </div>
+                  <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+                    gap: 16,
+                  }}>
+                    {indicators.map((ind) => (
+                      <IndicatorCard key={ind.series_id} ind={ind} catColor={catColor} />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Footer */}
+        <div style={{ borderTop: "1px solid #e5e7eb", padding: "20px 28px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
+            <span style={{ fontSize: 12, color: "#9ca3af", fontFamily: "monospace" }}>
+              Data sourced from FRED · Updated monthly
+            </span>
+            <span style={{ fontSize: 12, color: "#9ca3af", fontFamily: "monospace" }}>
+              Generated {data.generated}
+            </span>
+          </div>
         </div>
       </div>
     </div>
