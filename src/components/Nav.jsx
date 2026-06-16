@@ -5,7 +5,6 @@ const NAV_ITEMS = [
   { label: "Indicators", to: "/indicators" },
   { label: "Data Explorer", to: "/data" },
   { label: "Insights",      to: "/insights" },
-  { label: "Analysis",      to: "/research" },
   { label: "About",         to: "/about" },
   { label: "Contact",       to: "/contact" },
 ];

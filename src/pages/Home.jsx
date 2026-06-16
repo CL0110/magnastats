@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-const SNAPSHOT = [
-  { label: "Macro Regime",      value: "Goldilocks",  delta: "81% confidence",  color: "#4ade80", up: null },
-  { label: "EPOP (Prime Age)",  value: "80.7%",       delta: "+0.2 pts MoM",    color: "#4A90C4", up: true },
-  { label: "Unemployment Rate", value: "4.1%",        delta: "Unchanged",       color: "#C5A044", up: null },
-  { label: "LFPR",              value: "62.5%",       delta: "−0.1 pts MoM",    color: "#2AA89A", up: false },
-  { label: "CPI YoY",           value: "2.4%",        delta: "−0.3 pts MoM",    color: "#a78bfa", up: false },
-  { label: "10Y−2Y Spread",     value: "+0.38%",      delta: "Re-steepened",    color: "#f97316", up: true },
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+function fmtAsOf(d) {
+  if (!d) return null;
+  const parts = d.split("-");
+  const mo = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][parseInt(parts[1], 10) - 1];
+  return mo ? `${mo} ${parts[0]}` : d;
+}
+
+const SNAPSHOT_CONFIG = [
+  { id: "regime",   label: "Macro Regime",      color: "#4ade80" },
+  { id: "EMRATIO",  label: "Emp-Pop Ratio",      color: "#4A90C4", unit: "%", goodDir: "up" },
+  { id: "UNRATE",   label: "Unemployment Rate",  color: "#C5A044", unit: "%", goodDir: "down" },
+  { id: "CIVPART",  label: "LFPR",               color: "#2AA89A", unit: "%", goodDir: "up" },
+  { id: "CPIAUCSL", label: "CPI YoY",            color: "#a78bfa", unit: "%", goodDir: "down" },
+  { id: "T10Y2Y",   label: "10Y−2Y Spread",      color: "#f97316", unit: "%", goodDir: "up" },
 ];
 
 const SECTIONS = [
@@ -25,15 +35,61 @@ const SECTIONS = [
     accent: "#2AA89A",
   },
   {
-    to: "/research",
-    label: "Research",
+    to: "/insights",
+    label: "Insights & Analysis",
     tag: "ANALYSIS",
-    desc: "Original data essays with a thesis, a finding, and an argument — not just a chart.",
+    desc: "Visual charts from CPS microdata alongside original data essays with a thesis, a finding, and an argument.",
     accent: "#C5A044",
   },
 ];
 
 export default function Home() {
+  const [fredData, setFredData] = useState(null);
+  const [regimeData, setRegimeData] = useState(null);
+
+  useEffect(() => {
+    const base = import.meta.env.BASE_URL;
+    fetch(base + "data/fred_indicators.json").then(r => r.json()).then(setFredData).catch(console.error);
+    fetch(base + "data/regimes.json").then(r => r.json()).then(setRegimeData).catch(console.error);
+  }, []);
+
+  const now = new Date();
+  const currentMonthLabel = `${MONTHS[now.getMonth()]} ${now.getFullYear()}`;
+
+  const getInd = (id) => fredData?.indicators?.find(i => i.series_id === id) ?? null;
+
+  const snapshot = SNAPSHOT_CONFIG.map(cfg => {
+    if (cfg.id === "regime") {
+      const regime = regimeData?.current_regime;
+      const key = regime?.key;
+      const prob = key != null ? Math.round(regimeData?.current_probabilities?.[key] ?? 0) : null;
+      return {
+        label: "Macro Regime",
+        value: regime?.label ?? "—",
+        delta: prob != null ? `${prob}% confidence` : "—",
+        color: regime?.color ?? "#4ade80",
+        asOf: regimeData?.generated ?? null,
+        up: null,
+      };
+    }
+    const ind = getInd(cfg.id);
+    if (!ind) return { label: cfg.label, value: "—", delta: "—", color: cfg.color, asOf: null, up: null };
+    const mom = ind.mom_change;
+    const up = mom == null ? null
+      : cfg.goodDir === "up" ? (mom > 0 ? true : mom < 0 ? false : null)
+      : cfg.goodDir === "down" ? (mom < 0 ? true : mom > 0 ? false : null)
+      : null;
+    const sign = mom > 0 ? "+" : "";
+    return {
+      label: cfg.label,
+      value: `${ind.latest_value}${cfg.unit}`,
+      delta: mom != null ? `${sign}${mom} pts MoM` : "—",
+      color: cfg.color,
+      asOf: ind.latest_date,
+      up,
+    };
+  });
+
   return (
     <div style={{ minHeight: "100vh" }}>
 
@@ -45,7 +101,7 @@ export default function Home() {
             letterSpacing: "0.18em", color: "var(--accent)",
             textTransform: "uppercase", marginBottom: 16,
           }}>
-            Public Data · Rigorous Analysis · April 2026
+            Public Data · Rigorous Analysis · {currentMonthLabel}
           </div>
           <h1 style={{
             fontFamily: "'Playfair Display', serif",
@@ -71,7 +127,7 @@ export default function Home() {
             }}>
               EXPLORE THE DATA →
             </Link>
-            <Link to="/research" style={{
+            <Link to="/insights" style={{
               padding: "12px 26px", background: "rgba(255,255,255,0.07)",
               color: "rgba(255,255,255,0.6)", borderRadius: 5,
               border: "1px solid rgba(255,255,255,0.12)",
@@ -86,15 +142,24 @@ export default function Home() {
       {/* Snapshot strip */}
       <div style={{ background: "var(--navy)", borderBottom: "1px solid rgba(255,255,255,0.06)", padding: "0 28px" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", overflowX: "auto", gap: 0 }}>
-          {SNAPSHOT.map((s, i) => (
+          {snapshot.map((s, i) => (
             <div key={i} style={{
               flex: "1 0 auto", padding: "16px 22px",
               borderRight: "1px solid rgba(255,255,255,0.06)",
               minWidth: 160,
             }}>
               <div style={{ fontSize: 11, fontFamily: "'DM Mono', monospace", color: "var(--muted)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8 }}>{s.label}</div>
-              <div style={{ fontSize: 24, fontFamily: "'Playfair Display', serif", fontWeight: 700, color: s.color, marginBottom: 4 }}>{s.value}</div>
-              <div style={{ fontSize: 11, color: s.up === true ? "#4ade80" : s.up === false ? "#f87171" : "var(--muted)", fontFamily: "'DM Mono', monospace" }}>{s.delta}</div>
+              <div style={{ fontSize: 24, fontFamily: "'Playfair Display', serif", fontWeight: 700, color: s.color, marginBottom: 4 }}>
+                {s.value}
+              </div>
+              <div style={{ fontSize: 11, color: s.up === true ? "#4ade80" : s.up === false ? "#f87171" : "var(--muted)", fontFamily: "'DM Mono', monospace" }}>
+                {s.delta}
+              </div>
+              {s.asOf && (
+                <div style={{ fontSize: 10, color: "rgba(255,255,255,0.28)", fontFamily: "'DM Mono', monospace", marginTop: 4 }}>
+                  as of {fmtAsOf(s.asOf)}
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -108,13 +173,9 @@ export default function Home() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 18 }}>
           {SECTIONS.map((s) => (
             <Link key={s.to} to={s.to} style={{
-              display: "block",
-              background: "var(--white)",
-              borderRadius: 8,
-              padding: "28px 28px",
-              borderTop: `3px solid ${s.accent}`,
-              boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
-              transition: "transform 0.15s, box-shadow 0.15s",
+              display: "block", background: "var(--white)", borderRadius: 8,
+              padding: "28px 28px", borderTop: `3px solid ${s.accent}`,
+              boxShadow: "0 1px 4px rgba(0,0,0,0.06)", transition: "transform 0.15s, box-shadow 0.15s",
             }}
               onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.1)"; }}
               onMouseLeave={e => { e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = "0 1px 4px rgba(0,0,0,0.06)"; }}
@@ -122,7 +183,7 @@ export default function Home() {
               <div style={{ fontSize: 11, fontFamily: "'DM Mono', monospace", letterSpacing: "0.12em", color: s.accent, textTransform: "uppercase", marginBottom: 12, fontWeight: 600 }}>{s.tag}</div>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, color: "var(--ink)", marginBottom: 12 }}>{s.label}</div>
               <div style={{ fontSize: 15, lineHeight: 1.7, color: "var(--muted)" }}>{s.desc}</div>
-              <div style={{ marginTop: 20, fontSize: 13, fontWeight: 600, color: s.accent, letterSpacing: "0.04em", transition: "padding-left 0.15s" }}>EXPLORE →</div>
+              <div style={{ marginTop: 20, fontSize: 13, fontWeight: 600, color: s.accent, letterSpacing: "0.04em" }}>EXPLORE →</div>
             </Link>
           ))}
         </div>
@@ -135,7 +196,7 @@ export default function Home() {
             Magnastats · Data sourced from CPS, FRED · Updated monthly
           </span>
           <span style={{ fontSize: 12, color: "var(--muted)", fontFamily: "'DM Mono', monospace" }}>
-            © 2026
+            © {now.getFullYear()}
           </span>
         </div>
       </div>
