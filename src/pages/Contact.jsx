@@ -26,7 +26,7 @@ export default function Contact() {
           For inquiries, collaborations, or questions about the data, reach out via email.
         </p>
         <a
-          href="mailto:claire.bolam@magnastats.com"
+          href="mailto:clbolam@magnastats.com"
           style={{
             display: "inline-block",
             padding: "12px 24px",
@@ -39,7 +39,7 @@ export default function Contact() {
             letterSpacing: "0.04em",
           }}
         >
-          claire.bolam@magnastats.com
+          clbolam@magnastats.com
         </a>
       </div>
     </div>

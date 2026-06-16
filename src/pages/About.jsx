@@ -52,7 +52,7 @@ export default function About() {
             Get in Touch
           </div>
           <a
-            href="mailto:claire.bolam@magnastats.com"
+            href="mailto:clbolam@magnastats.com"
             style={{
               display: "inline-block",
               padding: "12px 24px",
@@ -65,7 +65,7 @@ export default function About() {
               letterSpacing: "0.04em",
             }}
           >
-            claire.bolam@magnastats.com
+            clbolam@magnastats.com
           </a>
         </div>
       </div>
