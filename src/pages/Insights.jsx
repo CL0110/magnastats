@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const POSTS = [
   {
@@ -167,8 +168,10 @@ const CAT_COLORS = {
 
 export default function Insights() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedPost, setSelectedPost] = useState(null);
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
 
+  const selectedPost = searchParams.get("post");
   const filtered = activeCategory === "All" ? POSTS : POSTS.filter((p) => p.category === activeCategory);
 
   if (selectedPost) {
@@ -178,10 +181,12 @@ export default function Insights() {
     return (
       <div style={{ background: "#f0f2f5", minHeight: "100vh" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "32px 28px" }}>
-          <button onClick={() => setSelectedPost(null)} style={{
-            background: "none", border: "none", cursor: "pointer",
-            fontSize: 13, fontFamily: "monospace", color: "#9ca3af",
-            marginBottom: 20, padding: 0,
+          <button onClick={() => navigate("/insights")} style={{
+            display: "inline-flex", alignItems: "center", gap: 6,
+            background: "#1a1a2e", border: "none", cursor: "pointer",
+            fontSize: 13, fontFamily: "monospace", color: "#fff",
+            marginBottom: 24, padding: "8px 16px", borderRadius: 5,
+            fontWeight: 600,
           }}>
             ← Back to Insights
           </button>
@@ -276,7 +281,7 @@ export default function Insights() {
             return (
               <div
                 key={post.id}
-                onClick={() => setSelectedPost(post.id)}
+                onClick={() => navigate(`/insights?post=${post.id}`)}
                 style={{
                   background: "#fff", borderRadius: 8, overflow: "hidden",
                   boxShadow: "0 1px 4px rgba(0,0,0,0.06)",

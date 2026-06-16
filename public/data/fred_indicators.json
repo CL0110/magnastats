@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-08",
+  "generated": "2026-06-16",
   "categories": {
     "Labor Market": [
       {
@@ -10,20 +10,12 @@
         "source": "BLS / JOLTS",
         "unit": "M",
         "good_direction": "up",
-        "latest_value": 6.88,
-        "latest_date": "2026-02",
-        "mom_change": -0.36,
-        "yoy_change": -0.07,
+        "latest_value": 7.62,
+        "latest_date": "2026-04",
+        "mom_change": 0.73,
+        "yoy_change": 0.31,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-03",
-            "value": 8.5
-          },
-          {
-            "date": "2021-04",
-            "value": 9.35
-          },
           {
             "date": "2021-05",
             "value": 9.95
@@ -255,6 +247,14 @@
           {
             "date": "2026-02",
             "value": 6.88
+          },
+          {
+            "date": "2026-03",
+            "value": 6.89
+          },
+          {
+            "date": "2026-04",
+            "value": 7.62
           }
         ]
       },
@@ -266,20 +266,12 @@
         "source": "BLS / CES",
         "unit": "M",
         "good_direction": "up",
-        "latest_value": 158.64,
-        "latest_date": "2026-03",
-        "mom_change": 0.18,
-        "yoy_change": 0.15,
+        "latest_value": 159.0,
+        "latest_date": "2026-05",
+        "mom_change": 0.17,
+        "yoy_change": 0.52,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-04",
-            "value": 144.59
-          },
-          {
-            "date": "2021-05",
-            "value": 145.06
-          },
           {
             "date": "2021-06",
             "value": 145.82
@@ -511,6 +503,14 @@
           {
             "date": "2026-03",
             "value": 158.64
+          },
+          {
+            "date": "2026-04",
+            "value": 158.83
+          },
+          {
+            "date": "2026-05",
+            "value": 159.0
           }
         ]
       },
@@ -523,19 +523,11 @@
         "unit": "%",
         "good_direction": "down",
         "latest_value": 4.3,
-        "latest_date": "2026-03",
-        "mom_change": -0.1,
-        "yoy_change": 0.1,
+        "latest_date": "2026-05",
+        "mom_change": 0.0,
+        "yoy_change": 0.2,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-03",
-            "value": 6.1
-          },
-          {
-            "date": "2021-04",
-            "value": 6.1
-          },
           {
             "date": "2021-05",
             "value": 5.8
@@ -767,6 +759,14 @@
           {
             "date": "2026-03",
             "value": 4.3
+          },
+          {
+            "date": "2026-04",
+            "value": 4.3
+          },
+          {
+            "date": "2026-05",
+            "value": 4.3
           }
         ]
       },
@@ -778,20 +778,12 @@
         "source": "BLS / CPS",
         "unit": "%",
         "good_direction": "down",
-        "latest_value": 8.0,
-        "latest_date": "2026-03",
-        "mom_change": 0.1,
-        "yoy_change": 0.2,
+        "latest_value": 8.1,
+        "latest_date": "2026-05",
+        "mom_change": -0.1,
+        "yoy_change": 0.4,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-03",
-            "value": 10.8
-          },
-          {
-            "date": "2021-04",
-            "value": 10.3
-          },
           {
             "date": "2021-05",
             "value": 10.1
@@ -1023,6 +1015,14 @@
           {
             "date": "2026-03",
             "value": 8.0
+          },
+          {
+            "date": "2026-04",
+            "value": 8.2
+          },
+          {
+            "date": "2026-05",
+            "value": 8.1
           }
         ]
       },
@@ -1035,19 +1035,11 @@
         "unit": "%",
         "good_direction": "up",
         "latest_value": 59.2,
-        "latest_date": "2026-03",
-        "mom_change": -0.1,
-        "yoy_change": -0.8,
+        "latest_date": "2026-05",
+        "mom_change": 0.1,
+        "yoy_change": -0.5,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-03",
-            "value": 57.7
-          },
-          {
-            "date": "2021-04",
-            "value": 57.8
-          },
           {
             "date": "2021-05",
             "value": 58.0
@@ -1279,6 +1271,14 @@
           {
             "date": "2026-03",
             "value": 59.2
+          },
+          {
+            "date": "2026-04",
+            "value": 59.1
+          },
+          {
+            "date": "2026-05",
+            "value": 59.2
           }
         ]
       },
@@ -1290,20 +1290,12 @@
         "source": "BLS / CPS",
         "unit": "%",
         "good_direction": "up",
-        "latest_value": 61.9,
-        "latest_date": "2026-03",
-        "mom_change": -0.1,
-        "yoy_change": -0.7,
+        "latest_value": 61.8,
+        "latest_date": "2026-05",
+        "mom_change": 0.0,
+        "yoy_change": -0.5,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-03",
-            "value": 61.5
-          },
-          {
-            "date": "2021-04",
-            "value": 61.6
-          },
           {
             "date": "2021-05",
             "value": 61.6
@@ -1535,6 +1527,14 @@
           {
             "date": "2026-03",
             "value": 61.9
+          },
+          {
+            "date": "2026-04",
+            "value": 61.8
+          },
+          {
+            "date": "2026-05",
+            "value": 61.8
           }
         ]
       },
@@ -1546,20 +1546,12 @@
         "source": "BLS / CES",
         "unit": "$",
         "good_direction": "up",
-        "latest_value": 37.38,
-        "latest_date": "2026-03",
-        "mom_change": 0.09,
-        "yoy_change": 1.26,
+        "latest_value": 37.53,
+        "latest_date": "2026-05",
+        "mom_change": 0.12,
+        "yoy_change": 1.17,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-04",
-            "value": 30.22
-          },
-          {
-            "date": "2021-05",
-            "value": 30.41
-          },
           {
             "date": "2021-06",
             "value": 30.54
@@ -1791,6 +1783,14 @@
           {
             "date": "2026-03",
             "value": 37.38
+          },
+          {
+            "date": "2026-04",
+            "value": 37.41
+          },
+          {
+            "date": "2026-05",
+            "value": 37.53
           }
         ]
       },
@@ -1803,19 +1803,11 @@
         "unit": "%",
         "good_direction": "up",
         "latest_value": 1.9,
-        "latest_date": "2026-02",
+        "latest_date": "2026-04",
         "mom_change": -0.1,
-        "yoy_change": -0.3,
+        "yoy_change": -0.2,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-03",
-            "value": 2.5
-          },
-          {
-            "date": "2021-04",
-            "value": 2.7
-          },
           {
             "date": "2021-05",
             "value": 2.6
@@ -2047,6 +2039,14 @@
           {
             "date": "2026-02",
             "value": 1.9
+          },
+          {
+            "date": "2026-03",
+            "value": 2.0
+          },
+          {
+            "date": "2026-04",
+            "value": 1.9
           }
         ]
       }
@@ -2060,16 +2060,12 @@
         "source": "BEA / NIPA",
         "unit": "%",
         "good_direction": "up",
-        "latest_value": 0.7,
-        "latest_date": "2025-10",
-        "mom_change": -3.7,
-        "yoy_change": -1.2,
+        "latest_value": 1.6,
+        "latest_date": "2026-01",
+        "mom_change": 0.9,
+        "yoy_change": 2.2,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2011-01",
-            "value": -0.9
-          },
           {
             "date": "2011-04",
             "value": 2.7
@@ -2305,6 +2301,10 @@
           {
             "date": "2025-10",
             "value": 0.7
+          },
+          {
+            "date": "2026-01",
+            "value": 1.6
           }
         ]
       },
@@ -2316,24 +2316,12 @@
         "source": "Federal Reserve",
         "unit": "",
         "good_direction": "up",
-        "latest_value": 1.4,
-        "latest_date": "2026-02",
-        "mom_change": -0.89,
-        "yoy_change": 1.4,
+        "latest_value": 1.7,
+        "latest_date": "2026-05",
+        "mom_change": 0.3,
+        "yoy_change": 1.7,
         "is_yoy_computed": true,
         "history": [
-          {
-            "date": "2021-03",
-            "value": 1.0
-          },
-          {
-            "date": "2021-04",
-            "value": 16.55
-          },
-          {
-            "date": "2021-05",
-            "value": 15.67
-          },
           {
             "date": "2021-06",
             "value": 8.96
@@ -2561,6 +2549,18 @@
           {
             "date": "2026-02",
             "value": 1.44
+          },
+          {
+            "date": "2026-03",
+            "value": 0.58
+          },
+          {
+            "date": "2026-04",
+            "value": 1.37
+          },
+          {
+            "date": "2026-05",
+            "value": 1.67
           }
         ]
       },
@@ -2572,20 +2572,12 @@
         "source": "Census Bureau",
         "unit": "B",
         "good_direction": "up",
-        "latest_value": 738.37,
-        "latest_date": "2026-02",
-        "mom_change": 4.41,
-        "yoy_change": 15.79,
+        "latest_value": 757.09,
+        "latest_date": "2026-04",
+        "mom_change": 3.72,
+        "yoy_change": 40.98,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-03",
-            "value": 603.58
-          },
-          {
-            "date": "2021-04",
-            "value": 608.96
-          },
           {
             "date": "2021-05",
             "value": 605.28
@@ -2817,6 +2809,14 @@
           {
             "date": "2026-02",
             "value": 738.37
+          },
+          {
+            "date": "2026-03",
+            "value": 753.37
+          },
+          {
+            "date": "2026-04",
+            "value": 757.09
           }
         ]
       },
@@ -2828,28 +2828,12 @@
         "source": "Census Bureau",
         "unit": "K",
         "good_direction": "up",
-        "latest_value": 1487.0,
-        "latest_date": "2026-01",
-        "mom_change": 100.0,
-        "yoy_change": -3.0,
+        "latest_value": 1177.0,
+        "latest_date": "2026-05",
+        "mom_change": -215.0,
+        "yoy_change": -205.0,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-02",
-            "value": 1404.0
-          },
-          {
-            "date": "2021-03",
-            "value": 1696.0
-          },
-          {
-            "date": "2021-04",
-            "value": 1495.0
-          },
-          {
-            "date": "2021-05",
-            "value": 1589.0
-          },
           {
             "date": "2021-06",
             "value": 1650.0
@@ -3073,6 +3057,22 @@
           {
             "date": "2026-01",
             "value": 1487.0
+          },
+          {
+            "date": "2026-02",
+            "value": 1346.0
+          },
+          {
+            "date": "2026-03",
+            "value": 1522.0
+          },
+          {
+            "date": "2026-04",
+            "value": 1392.0
+          },
+          {
+            "date": "2026-05",
+            "value": 1177.0
           }
         ]
       },
@@ -3084,28 +3084,12 @@
         "source": "Census Bureau",
         "unit": "K",
         "good_direction": "up",
-        "latest_value": 1386.0,
-        "latest_date": "2026-01",
-        "mom_change": -69.0,
-        "yoy_change": -68.0,
+        "latest_value": 1413.0,
+        "latest_date": "2026-05",
+        "mom_change": -10.0,
+        "yoy_change": 20.0,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-02",
-            "value": 1711.0
-          },
-          {
-            "date": "2021-03",
-            "value": 1756.0
-          },
-          {
-            "date": "2021-04",
-            "value": 1721.0
-          },
-          {
-            "date": "2021-05",
-            "value": 1703.0
-          },
           {
             "date": "2021-06",
             "value": 1654.0
@@ -3329,6 +3313,22 @@
           {
             "date": "2026-01",
             "value": 1386.0
+          },
+          {
+            "date": "2026-02",
+            "value": 1540.0
+          },
+          {
+            "date": "2026-03",
+            "value": 1363.0
+          },
+          {
+            "date": "2026-04",
+            "value": 1423.0
+          },
+          {
+            "date": "2026-05",
+            "value": 1413.0
           }
         ]
       }
@@ -3342,24 +3342,12 @@
         "source": "BLS",
         "unit": "",
         "good_direction": "down",
-        "latest_value": 2.4,
-        "latest_date": "2026-02",
-        "mom_change": 0.04,
-        "yoy_change": 2.4,
+        "latest_value": 4.2,
+        "latest_date": "2026-05",
+        "mom_change": 0.39,
+        "yoy_change": 4.2,
         "is_yoy_computed": true,
         "history": [
-          {
-            "date": "2021-02",
-            "value": 1.67
-          },
-          {
-            "date": "2021-03",
-            "value": 2.67
-          },
-          {
-            "date": "2021-04",
-            "value": 4.13
-          },
           {
             "date": "2021-05",
             "value": 4.92
@@ -3587,6 +3575,18 @@
           {
             "date": "2026-02",
             "value": 2.43
+          },
+          {
+            "date": "2026-03",
+            "value": 3.29
+          },
+          {
+            "date": "2026-04",
+            "value": 3.78
+          },
+          {
+            "date": "2026-05",
+            "value": 4.17
           }
         ]
       },
@@ -3598,24 +3598,12 @@
         "source": "BLS",
         "unit": "",
         "good_direction": "down",
-        "latest_value": 2.5,
-        "latest_date": "2026-02",
-        "mom_change": -0.04,
-        "yoy_change": 2.5,
+        "latest_value": 2.8,
+        "latest_date": "2026-05",
+        "mom_change": 0.08,
+        "yoy_change": 2.8,
         "is_yoy_computed": true,
         "history": [
-          {
-            "date": "2021-02",
-            "value": 1.28
-          },
-          {
-            "date": "2021-03",
-            "value": 1.65
-          },
-          {
-            "date": "2021-04",
-            "value": 2.98
-          },
           {
             "date": "2021-05",
             "value": 3.79
@@ -3843,6 +3831,18 @@
           {
             "date": "2026-02",
             "value": 2.47
+          },
+          {
+            "date": "2026-03",
+            "value": 2.6
+          },
+          {
+            "date": "2026-04",
+            "value": 2.74
+          },
+          {
+            "date": "2026-05",
+            "value": 2.82
           }
         ]
       },
@@ -3854,24 +3854,12 @@
         "source": "BEA",
         "unit": "",
         "good_direction": "down",
-        "latest_value": 2.8,
-        "latest_date": "2026-01",
-        "mom_change": -0.08,
-        "yoy_change": 2.8,
+        "latest_value": 3.8,
+        "latest_date": "2026-04",
+        "mom_change": 0.24,
+        "yoy_change": 3.8,
         "is_yoy_computed": true,
         "history": [
-          {
-            "date": "2021-02",
-            "value": 1.84
-          },
-          {
-            "date": "2021-03",
-            "value": 2.67
-          },
-          {
-            "date": "2021-04",
-            "value": 3.64
-          },
           {
             "date": "2021-05",
             "value": 4.07
@@ -4099,6 +4087,18 @@
           {
             "date": "2026-01",
             "value": 2.83
+          },
+          {
+            "date": "2026-02",
+            "value": 2.86
+          },
+          {
+            "date": "2026-03",
+            "value": 3.53
+          },
+          {
+            "date": "2026-04",
+            "value": 3.77
           }
         ]
       },
@@ -4110,24 +4110,12 @@
         "source": "BEA",
         "unit": "",
         "good_direction": "down",
-        "latest_value": 3.1,
-        "latest_date": "2026-01",
+        "latest_value": 3.3,
+        "latest_date": "2026-04",
         "mom_change": 0.05,
-        "yoy_change": 3.1,
+        "yoy_change": 3.3,
         "is_yoy_computed": true,
         "history": [
-          {
-            "date": "2021-02",
-            "value": 1.71
-          },
-          {
-            "date": "2021-03",
-            "value": 2.2
-          },
-          {
-            "date": "2021-04",
-            "value": 3.13
-          },
           {
             "date": "2021-05",
             "value": 3.54
@@ -4355,6 +4343,18 @@
           {
             "date": "2026-01",
             "value": 3.06
+          },
+          {
+            "date": "2026-02",
+            "value": 3.03
+          },
+          {
+            "date": "2026-03",
+            "value": 3.24
+          },
+          {
+            "date": "2026-04",
+            "value": 3.29
           }
         ]
       },
@@ -4366,24 +4366,12 @@
         "source": "BLS",
         "unit": "",
         "good_direction": "down",
-        "latest_value": 3.2,
-        "latest_date": "2026-02",
-        "mom_change": 1.26,
-        "yoy_change": 3.2,
+        "latest_value": 13.1,
+        "latest_date": "2026-05",
+        "mom_change": 3.67,
+        "yoy_change": 13.1,
         "is_yoy_computed": true,
         "history": [
-          {
-            "date": "2021-03",
-            "value": 11.34
-          },
-          {
-            "date": "2021-04",
-            "value": 17.47
-          },
-          {
-            "date": "2021-05",
-            "value": 19.25
-          },
           {
             "date": "2021-06",
             "value": 19.72
@@ -4611,6 +4599,18 @@
           {
             "date": "2026-02",
             "value": 3.22
+          },
+          {
+            "date": "2026-03",
+            "value": 6.75
+          },
+          {
+            "date": "2026-04",
+            "value": 9.41
+          },
+          {
+            "date": "2026-05",
+            "value": 13.08
           }
         ]
       }
@@ -4624,20 +4624,12 @@
         "source": "Federal Reserve",
         "unit": "%",
         "good_direction": "down",
-        "latest_value": 4.33,
-        "latest_date": "2026-04",
+        "latest_value": 4.48,
+        "latest_date": "2026-06",
         "mom_change": 0.03,
-        "yoy_change": -0.08,
+        "yoy_change": 0.11,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-05",
-            "value": 1.58
-          },
-          {
-            "date": "2021-06",
-            "value": 1.45
-          },
           {
             "date": "2021-07",
             "value": 1.24
@@ -4868,7 +4860,15 @@
           },
           {
             "date": "2026-04",
-            "value": 4.33
+            "value": 4.4
+          },
+          {
+            "date": "2026-05",
+            "value": 4.45
+          },
+          {
+            "date": "2026-06",
+            "value": 4.48
           }
         ]
       },
@@ -4880,20 +4880,12 @@
         "source": "Federal Reserve",
         "unit": "%",
         "good_direction": "down",
-        "latest_value": 3.81,
-        "latest_date": "2026-04",
-        "mom_change": 0.02,
-        "yoy_change": -0.08,
+        "latest_value": 4.09,
+        "latest_date": "2026-06",
+        "mom_change": 0.11,
+        "yoy_change": 0.15,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-05",
-            "value": 0.14
-          },
-          {
-            "date": "2021-06",
-            "value": 0.25
-          },
           {
             "date": "2021-07",
             "value": 0.19
@@ -5124,7 +5116,15 @@
           },
           {
             "date": "2026-04",
-            "value": 3.81
+            "value": 3.88
+          },
+          {
+            "date": "2026-05",
+            "value": 3.98
+          },
+          {
+            "date": "2026-06",
+            "value": 4.09
           }
         ]
       },
@@ -5136,20 +5136,12 @@
         "source": "Federal Reserve",
         "unit": "%",
         "good_direction": "up",
-        "latest_value": 0.5,
-        "latest_date": "2026-04",
-        "mom_change": -0.01,
-        "yoy_change": -0.02,
+        "latest_value": 0.4,
+        "latest_date": "2026-06",
+        "mom_change": -0.07,
+        "yoy_change": -0.03,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-05",
-            "value": 1.44
-          },
-          {
-            "date": "2021-06",
-            "value": 1.2
-          },
           {
             "date": "2021-07",
             "value": 1.05
@@ -5380,7 +5372,15 @@
           },
           {
             "date": "2026-04",
-            "value": 0.5
+            "value": 0.52
+          },
+          {
+            "date": "2026-05",
+            "value": 0.47
+          },
+          {
+            "date": "2026-06",
+            "value": 0.4
           }
         ]
       },
@@ -5392,16 +5392,12 @@
         "source": "Federal Reserve / SLOOS",
         "unit": "%",
         "good_direction": "down",
-        "latest_value": 5.3,
-        "latest_date": "2026-01",
-        "mom_change": -1.2,
-        "yoy_change": -0.9,
+        "latest_value": 8.1,
+        "latest_date": "2026-04",
+        "mom_change": 2.8,
+        "yoy_change": -10.4,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2011-04",
-            "value": -16.4
-          },
           {
             "date": "2011-07",
             "value": -21.8
@@ -5637,6 +5633,10 @@
           {
             "date": "2026-01",
             "value": 5.3
+          },
+          {
+            "date": "2026-04",
+            "value": 8.1
           }
         ]
       },
@@ -5648,10 +5648,10 @@
         "source": "Federal Reserve / SLOOS",
         "unit": "%",
         "good_direction": "down",
-        "latest_value": 8.3,
-        "latest_date": "2026-01",
-        "mom_change": 2.0,
-        "yoy_change": -0.8,
+        "latest_value": 6.3,
+        "latest_date": "2026-04",
+        "mom_change": -2.0,
+        "yoy_change": 6.3,
         "is_yoy_computed": false,
         "history": [
           {
@@ -5881,6 +5881,10 @@
           {
             "date": "2026-01",
             "value": 8.3
+          },
+          {
+            "date": "2026-04",
+            "value": 6.3
           }
         ]
       },
@@ -5892,20 +5896,12 @@
         "source": "ICE / BofA",
         "unit": "%",
         "good_direction": "down",
-        "latest_value": 3.12,
-        "latest_date": "2026-04",
-        "mom_change": -0.16,
+        "latest_value": 2.66,
+        "latest_date": "2026-06",
+        "mom_change": -0.08,
         "yoy_change": -0.2,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-05",
-            "value": 3.34
-          },
-          {
-            "date": "2021-06",
-            "value": 3.04
-          },
           {
             "date": "2021-07",
             "value": 3.32
@@ -6136,7 +6132,15 @@
           },
           {
             "date": "2026-04",
-            "value": 3.12
+            "value": 2.83
+          },
+          {
+            "date": "2026-05",
+            "value": 2.74
+          },
+          {
+            "date": "2026-06",
+            "value": 2.66
           }
         ]
       }
@@ -6150,20 +6154,12 @@
         "source": "U. Michigan",
         "unit": "",
         "good_direction": "up",
-        "latest_value": -12.5,
-        "latest_date": "2026-02",
-        "mom_change": 8.82,
-        "yoy_change": -12.5,
+        "latest_value": -4.6,
+        "latest_date": "2026-04",
+        "mom_change": 1.89,
+        "yoy_change": -4.6,
         "is_yoy_computed": true,
         "history": [
-          {
-            "date": "2021-03",
-            "value": -4.71
-          },
-          {
-            "date": "2021-04",
-            "value": 22.98
-          },
           {
             "date": "2021-05",
             "value": 14.66
@@ -6395,6 +6391,14 @@
           {
             "date": "2026-02",
             "value": -12.52
+          },
+          {
+            "date": "2026-03",
+            "value": -6.49
+          },
+          {
+            "date": "2026-04",
+            "value": -4.6
           }
         ]
       },
@@ -6664,20 +6668,12 @@
         "source": "Federal Reserve",
         "unit": "%",
         "good_direction": "down",
-        "latest_value": 3.64,
-        "latest_date": "2026-03",
-        "mom_change": 0.0,
-        "yoy_change": -0.69,
+        "latest_value": 3.63,
+        "latest_date": "2026-05",
+        "mom_change": -0.01,
+        "yoy_change": -0.7,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-04",
-            "value": 0.07
-          },
-          {
-            "date": "2021-05",
-            "value": 0.06
-          },
           {
             "date": "2021-06",
             "value": 0.08
@@ -6909,6 +6905,14 @@
           {
             "date": "2026-03",
             "value": 3.64
+          },
+          {
+            "date": "2026-04",
+            "value": 3.64
+          },
+          {
+            "date": "2026-05",
+            "value": 3.63
           }
         ]
       },
@@ -6920,20 +6924,12 @@
         "source": "Federal Reserve",
         "unit": "%",
         "good_direction": "down",
-        "latest_value": 2.33,
-        "latest_date": "2026-04",
-        "mom_change": 0.03,
-        "yoy_change": -0.01,
+        "latest_value": 2.32,
+        "latest_date": "2026-06",
+        "mom_change": -0.06,
+        "yoy_change": -0.07,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-05",
-            "value": 2.42
-          },
-          {
-            "date": "2021-06",
-            "value": 2.32
-          },
           {
             "date": "2021-07",
             "value": 2.4
@@ -7164,7 +7160,15 @@
           },
           {
             "date": "2026-04",
-            "value": 2.33
+            "value": 2.46
+          },
+          {
+            "date": "2026-05",
+            "value": 2.38
+          },
+          {
+            "date": "2026-06",
+            "value": 2.32
           }
         ]
       },
@@ -7176,20 +7180,12 @@
         "source": "Freddie Mac",
         "unit": "%",
         "good_direction": "down",
-        "latest_value": 6.46,
-        "latest_date": "2026-04",
-        "mom_change": 0.08,
-        "yoy_change": -0.43,
+        "latest_value": 6.52,
+        "latest_date": "2026-06",
+        "mom_change": -0.01,
+        "yoy_change": -0.2,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-05",
-            "value": 2.95
-          },
-          {
-            "date": "2021-06",
-            "value": 3.02
-          },
           {
             "date": "2021-07",
             "value": 2.8
@@ -7420,7 +7416,15 @@
           },
           {
             "date": "2026-04",
-            "value": 6.46
+            "value": 6.3
+          },
+          {
+            "date": "2026-05",
+            "value": 6.53
+          },
+          {
+            "date": "2026-06",
+            "value": 6.52
           }
         ]
       }
@@ -7434,24 +7438,12 @@
         "source": "DOL / ETA",
         "unit": "K",
         "good_direction": "down",
-        "latest_value": 202000.0,
-        "latest_date": "2026-03",
-        "mom_change": -12000.0,
-        "yoy_change": -37000.0,
+        "latest_value": 229000.0,
+        "latest_date": "2026-06",
+        "mom_change": 4000.0,
+        "yoy_change": 10000.0,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-04",
-            "value": 574000.0
-          },
-          {
-            "date": "2021-05",
-            "value": 427000.0
-          },
-          {
-            "date": "2021-06",
-            "value": 368000.0
-          },
           {
             "date": "2021-07",
             "value": 379000.0
@@ -7679,6 +7671,18 @@
           {
             "date": "2026-03",
             "value": 202000.0
+          },
+          {
+            "date": "2026-04",
+            "value": 190000.0
+          },
+          {
+            "date": "2026-05",
+            "value": 225000.0
+          },
+          {
+            "date": "2026-06",
+            "value": 229000.0
           }
         ]
       },
@@ -7690,20 +7694,12 @@
         "source": "DOL / ETA",
         "unit": "M",
         "good_direction": "down",
-        "latest_value": 1841.0,
-        "latest_date": "2026-03",
-        "mom_change": -6.0,
-        "yoy_change": -35.0,
+        "latest_value": 1795.0,
+        "latest_date": "2026-05",
+        "mom_change": 37.0,
+        "yoy_change": -157.0,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-04",
-            "value": 3767.0
-          },
-          {
-            "date": "2021-05",
-            "value": 3422.0
-          },
           {
             "date": "2021-06",
             "value": 3313.0
@@ -7934,7 +7930,15 @@
           },
           {
             "date": "2026-03",
-            "value": 1841.0
+            "value": 1787.0
+          },
+          {
+            "date": "2026-04",
+            "value": 1758.0
+          },
+          {
+            "date": "2026-05",
+            "value": 1795.0
           }
         ]
       },
@@ -7946,20 +7950,12 @@
         "source": "EIA",
         "unit": "$",
         "good_direction": "down",
-        "latest_value": 114.01,
-        "latest_date": "2026-04",
-        "mom_change": 11.15,
-        "yoy_change": 52.55,
+        "latest_value": 95.0,
+        "latest_date": "2026-06",
+        "mom_change": 3.84,
+        "yoy_change": 24.64,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-05",
-            "value": 66.31
-          },
-          {
-            "date": "2021-06",
-            "value": 73.52
-          },
           {
             "date": "2021-07",
             "value": 73.93
@@ -8190,7 +8186,15 @@
           },
           {
             "date": "2026-04",
-            "value": 114.01
+            "value": 108.64
+          },
+          {
+            "date": "2026-05",
+            "value": 91.16
+          },
+          {
+            "date": "2026-06",
+            "value": 95.0
           }
         ]
       },
@@ -8202,20 +8206,12 @@
         "source": "CBOE",
         "unit": "",
         "good_direction": "down",
-        "latest_value": 4.4,
-        "latest_date": "2026-04",
-        "mom_change": -8.96,
-        "yoy_change": 4.4,
+        "latest_value": -3.2,
+        "latest_date": "2026-06",
+        "mom_change": 14.33,
+        "yoy_change": -3.2,
         "is_yoy_computed": true,
         "history": [
-          {
-            "date": "2021-05",
-            "value": -39.08
-          },
-          {
-            "date": "2021-06",
-            "value": -47.98
-          },
           {
             "date": "2021-07",
             "value": -25.43
@@ -8446,7 +8442,15 @@
           },
           {
             "date": "2026-04",
-            "value": 4.37
+            "value": -31.62
+          },
+          {
+            "date": "2026-05",
+            "value": -17.5
+          },
+          {
+            "date": "2026-06",
+            "value": -3.17
           }
         ]
       }
@@ -8460,24 +8464,12 @@
         "source": "U.S. Treasury",
         "unit": "B",
         "good_direction": "up",
-        "latest_value": -307.5,
-        "latest_date": "2026-02",
-        "mom_change": -212.89,
-        "yoy_change": -146.97,
+        "latest_value": -292.65,
+        "latest_date": "2026-05",
+        "mom_change": -507.67,
+        "yoy_change": -319.66,
         "is_yoy_computed": false,
         "history": [
-          {
-            "date": "2021-03",
-            "value": -659.59
-          },
-          {
-            "date": "2021-04",
-            "value": -225.58
-          },
-          {
-            "date": "2021-05",
-            "value": -131.95
-          },
           {
             "date": "2021-06",
             "value": -174.16
@@ -8705,6 +8697,18 @@
           {
             "date": "2026-02",
             "value": -307.5
+          },
+          {
+            "date": "2026-03",
+            "value": -164.1
+          },
+          {
+            "date": "2026-04",
+            "value": 215.02
+          },
+          {
+            "date": "2026-05",
+            "value": -292.65
           }
         ]
       },
@@ -8975,20 +8979,12 @@
       "source": "BLS / JOLTS",
       "unit": "M",
       "good_direction": "up",
-      "latest_value": 6.88,
-      "latest_date": "2026-02",
-      "mom_change": -0.36,
-      "yoy_change": -0.07,
+      "latest_value": 7.62,
+      "latest_date": "2026-04",
+      "mom_change": 0.73,
+      "yoy_change": 0.31,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-03",
-          "value": 8.5
-        },
-        {
-          "date": "2021-04",
-          "value": 9.35
-        },
         {
           "date": "2021-05",
           "value": 9.95
@@ -9220,6 +9216,14 @@
         {
           "date": "2026-02",
           "value": 6.88
+        },
+        {
+          "date": "2026-03",
+          "value": 6.89
+        },
+        {
+          "date": "2026-04",
+          "value": 7.62
         }
       ]
     },
@@ -9231,20 +9235,12 @@
       "source": "BLS / CES",
       "unit": "M",
       "good_direction": "up",
-      "latest_value": 158.64,
-      "latest_date": "2026-03",
-      "mom_change": 0.18,
-      "yoy_change": 0.15,
+      "latest_value": 159.0,
+      "latest_date": "2026-05",
+      "mom_change": 0.17,
+      "yoy_change": 0.52,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-04",
-          "value": 144.59
-        },
-        {
-          "date": "2021-05",
-          "value": 145.06
-        },
         {
           "date": "2021-06",
           "value": 145.82
@@ -9476,6 +9472,14 @@
         {
           "date": "2026-03",
           "value": 158.64
+        },
+        {
+          "date": "2026-04",
+          "value": 158.83
+        },
+        {
+          "date": "2026-05",
+          "value": 159.0
         }
       ]
     },
@@ -9488,19 +9492,11 @@
       "unit": "%",
       "good_direction": "down",
       "latest_value": 4.3,
-      "latest_date": "2026-03",
-      "mom_change": -0.1,
-      "yoy_change": 0.1,
+      "latest_date": "2026-05",
+      "mom_change": 0.0,
+      "yoy_change": 0.2,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-03",
-          "value": 6.1
-        },
-        {
-          "date": "2021-04",
-          "value": 6.1
-        },
         {
           "date": "2021-05",
           "value": 5.8
@@ -9732,6 +9728,14 @@
         {
           "date": "2026-03",
           "value": 4.3
+        },
+        {
+          "date": "2026-04",
+          "value": 4.3
+        },
+        {
+          "date": "2026-05",
+          "value": 4.3
         }
       ]
     },
@@ -9743,20 +9747,12 @@
       "source": "BLS / CPS",
       "unit": "%",
       "good_direction": "down",
-      "latest_value": 8.0,
-      "latest_date": "2026-03",
-      "mom_change": 0.1,
-      "yoy_change": 0.2,
+      "latest_value": 8.1,
+      "latest_date": "2026-05",
+      "mom_change": -0.1,
+      "yoy_change": 0.4,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-03",
-          "value": 10.8
-        },
-        {
-          "date": "2021-04",
-          "value": 10.3
-        },
         {
           "date": "2021-05",
           "value": 10.1
@@ -9988,6 +9984,14 @@
         {
           "date": "2026-03",
           "value": 8.0
+        },
+        {
+          "date": "2026-04",
+          "value": 8.2
+        },
+        {
+          "date": "2026-05",
+          "value": 8.1
         }
       ]
     },
@@ -10000,19 +10004,11 @@
       "unit": "%",
       "good_direction": "up",
       "latest_value": 59.2,
-      "latest_date": "2026-03",
-      "mom_change": -0.1,
-      "yoy_change": -0.8,
+      "latest_date": "2026-05",
+      "mom_change": 0.1,
+      "yoy_change": -0.5,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-03",
-          "value": 57.7
-        },
-        {
-          "date": "2021-04",
-          "value": 57.8
-        },
         {
           "date": "2021-05",
           "value": 58.0
@@ -10244,6 +10240,14 @@
         {
           "date": "2026-03",
           "value": 59.2
+        },
+        {
+          "date": "2026-04",
+          "value": 59.1
+        },
+        {
+          "date": "2026-05",
+          "value": 59.2
         }
       ]
     },
@@ -10255,20 +10259,12 @@
       "source": "BLS / CPS",
       "unit": "%",
       "good_direction": "up",
-      "latest_value": 61.9,
-      "latest_date": "2026-03",
-      "mom_change": -0.1,
-      "yoy_change": -0.7,
+      "latest_value": 61.8,
+      "latest_date": "2026-05",
+      "mom_change": 0.0,
+      "yoy_change": -0.5,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-03",
-          "value": 61.5
-        },
-        {
-          "date": "2021-04",
-          "value": 61.6
-        },
         {
           "date": "2021-05",
           "value": 61.6
@@ -10500,6 +10496,14 @@
         {
           "date": "2026-03",
           "value": 61.9
+        },
+        {
+          "date": "2026-04",
+          "value": 61.8
+        },
+        {
+          "date": "2026-05",
+          "value": 61.8
         }
       ]
     },
@@ -10511,20 +10515,12 @@
       "source": "BLS / CES",
       "unit": "$",
       "good_direction": "up",
-      "latest_value": 37.38,
-      "latest_date": "2026-03",
-      "mom_change": 0.09,
-      "yoy_change": 1.26,
+      "latest_value": 37.53,
+      "latest_date": "2026-05",
+      "mom_change": 0.12,
+      "yoy_change": 1.17,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-04",
-          "value": 30.22
-        },
-        {
-          "date": "2021-05",
-          "value": 30.41
-        },
         {
           "date": "2021-06",
           "value": 30.54
@@ -10756,6 +10752,14 @@
         {
           "date": "2026-03",
           "value": 37.38
+        },
+        {
+          "date": "2026-04",
+          "value": 37.41
+        },
+        {
+          "date": "2026-05",
+          "value": 37.53
         }
       ]
     },
@@ -10768,19 +10772,11 @@
       "unit": "%",
       "good_direction": "up",
       "latest_value": 1.9,
-      "latest_date": "2026-02",
+      "latest_date": "2026-04",
       "mom_change": -0.1,
-      "yoy_change": -0.3,
+      "yoy_change": -0.2,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-03",
-          "value": 2.5
-        },
-        {
-          "date": "2021-04",
-          "value": 2.7
-        },
         {
           "date": "2021-05",
           "value": 2.6
@@ -11012,6 +11008,14 @@
         {
           "date": "2026-02",
           "value": 1.9
+        },
+        {
+          "date": "2026-03",
+          "value": 2.0
+        },
+        {
+          "date": "2026-04",
+          "value": 1.9
         }
       ]
     },
@@ -11023,16 +11027,12 @@
       "source": "BEA / NIPA",
       "unit": "%",
       "good_direction": "up",
-      "latest_value": 0.7,
-      "latest_date": "2025-10",
-      "mom_change": -3.7,
-      "yoy_change": -1.2,
+      "latest_value": 1.6,
+      "latest_date": "2026-01",
+      "mom_change": 0.9,
+      "yoy_change": 2.2,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2011-01",
-          "value": -0.9
-        },
         {
           "date": "2011-04",
           "value": 2.7
@@ -11268,6 +11268,10 @@
         {
           "date": "2025-10",
           "value": 0.7
+        },
+        {
+          "date": "2026-01",
+          "value": 1.6
         }
       ]
     },
@@ -11279,24 +11283,12 @@
       "source": "Federal Reserve",
       "unit": "",
       "good_direction": "up",
-      "latest_value": 1.4,
-      "latest_date": "2026-02",
-      "mom_change": -0.89,
-      "yoy_change": 1.4,
+      "latest_value": 1.7,
+      "latest_date": "2026-05",
+      "mom_change": 0.3,
+      "yoy_change": 1.7,
       "is_yoy_computed": true,
       "history": [
-        {
-          "date": "2021-03",
-          "value": 1.0
-        },
-        {
-          "date": "2021-04",
-          "value": 16.55
-        },
-        {
-          "date": "2021-05",
-          "value": 15.67
-        },
         {
           "date": "2021-06",
           "value": 8.96
@@ -11524,6 +11516,18 @@
         {
           "date": "2026-02",
           "value": 1.44
+        },
+        {
+          "date": "2026-03",
+          "value": 0.58
+        },
+        {
+          "date": "2026-04",
+          "value": 1.37
+        },
+        {
+          "date": "2026-05",
+          "value": 1.67
         }
       ]
     },
@@ -11535,20 +11539,12 @@
       "source": "Census Bureau",
       "unit": "B",
       "good_direction": "up",
-      "latest_value": 738.37,
-      "latest_date": "2026-02",
-      "mom_change": 4.41,
-      "yoy_change": 15.79,
+      "latest_value": 757.09,
+      "latest_date": "2026-04",
+      "mom_change": 3.72,
+      "yoy_change": 40.98,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-03",
-          "value": 603.58
-        },
-        {
-          "date": "2021-04",
-          "value": 608.96
-        },
         {
           "date": "2021-05",
           "value": 605.28
@@ -11780,6 +11776,14 @@
         {
           "date": "2026-02",
           "value": 738.37
+        },
+        {
+          "date": "2026-03",
+          "value": 753.37
+        },
+        {
+          "date": "2026-04",
+          "value": 757.09
         }
       ]
     },
@@ -11791,28 +11795,12 @@
       "source": "Census Bureau",
       "unit": "K",
       "good_direction": "up",
-      "latest_value": 1487.0,
-      "latest_date": "2026-01",
-      "mom_change": 100.0,
-      "yoy_change": -3.0,
+      "latest_value": 1177.0,
+      "latest_date": "2026-05",
+      "mom_change": -215.0,
+      "yoy_change": -205.0,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-02",
-          "value": 1404.0
-        },
-        {
-          "date": "2021-03",
-          "value": 1696.0
-        },
-        {
-          "date": "2021-04",
-          "value": 1495.0
-        },
-        {
-          "date": "2021-05",
-          "value": 1589.0
-        },
         {
           "date": "2021-06",
           "value": 1650.0
@@ -12036,6 +12024,22 @@
         {
           "date": "2026-01",
           "value": 1487.0
+        },
+        {
+          "date": "2026-02",
+          "value": 1346.0
+        },
+        {
+          "date": "2026-03",
+          "value": 1522.0
+        },
+        {
+          "date": "2026-04",
+          "value": 1392.0
+        },
+        {
+          "date": "2026-05",
+          "value": 1177.0
         }
       ]
     },
@@ -12047,28 +12051,12 @@
       "source": "Census Bureau",
       "unit": "K",
       "good_direction": "up",
-      "latest_value": 1386.0,
-      "latest_date": "2026-01",
-      "mom_change": -69.0,
-      "yoy_change": -68.0,
+      "latest_value": 1413.0,
+      "latest_date": "2026-05",
+      "mom_change": -10.0,
+      "yoy_change": 20.0,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-02",
-          "value": 1711.0
-        },
-        {
-          "date": "2021-03",
-          "value": 1756.0
-        },
-        {
-          "date": "2021-04",
-          "value": 1721.0
-        },
-        {
-          "date": "2021-05",
-          "value": 1703.0
-        },
         {
           "date": "2021-06",
           "value": 1654.0
@@ -12292,6 +12280,22 @@
         {
           "date": "2026-01",
           "value": 1386.0
+        },
+        {
+          "date": "2026-02",
+          "value": 1540.0
+        },
+        {
+          "date": "2026-03",
+          "value": 1363.0
+        },
+        {
+          "date": "2026-04",
+          "value": 1423.0
+        },
+        {
+          "date": "2026-05",
+          "value": 1413.0
         }
       ]
     },
@@ -12303,24 +12307,12 @@
       "source": "BLS",
       "unit": "",
       "good_direction": "down",
-      "latest_value": 2.4,
-      "latest_date": "2026-02",
-      "mom_change": 0.04,
-      "yoy_change": 2.4,
+      "latest_value": 4.2,
+      "latest_date": "2026-05",
+      "mom_change": 0.39,
+      "yoy_change": 4.2,
       "is_yoy_computed": true,
       "history": [
-        {
-          "date": "2021-02",
-          "value": 1.67
-        },
-        {
-          "date": "2021-03",
-          "value": 2.67
-        },
-        {
-          "date": "2021-04",
-          "value": 4.13
-        },
         {
           "date": "2021-05",
           "value": 4.92
@@ -12548,6 +12540,18 @@
         {
           "date": "2026-02",
           "value": 2.43
+        },
+        {
+          "date": "2026-03",
+          "value": 3.29
+        },
+        {
+          "date": "2026-04",
+          "value": 3.78
+        },
+        {
+          "date": "2026-05",
+          "value": 4.17
         }
       ]
     },
@@ -12559,24 +12563,12 @@
       "source": "BLS",
       "unit": "",
       "good_direction": "down",
-      "latest_value": 2.5,
-      "latest_date": "2026-02",
-      "mom_change": -0.04,
-      "yoy_change": 2.5,
+      "latest_value": 2.8,
+      "latest_date": "2026-05",
+      "mom_change": 0.08,
+      "yoy_change": 2.8,
       "is_yoy_computed": true,
       "history": [
-        {
-          "date": "2021-02",
-          "value": 1.28
-        },
-        {
-          "date": "2021-03",
-          "value": 1.65
-        },
-        {
-          "date": "2021-04",
-          "value": 2.98
-        },
         {
           "date": "2021-05",
           "value": 3.79
@@ -12804,6 +12796,18 @@
         {
           "date": "2026-02",
           "value": 2.47
+        },
+        {
+          "date": "2026-03",
+          "value": 2.6
+        },
+        {
+          "date": "2026-04",
+          "value": 2.74
+        },
+        {
+          "date": "2026-05",
+          "value": 2.82
         }
       ]
     },
@@ -12815,24 +12819,12 @@
       "source": "BEA",
       "unit": "",
       "good_direction": "down",
-      "latest_value": 2.8,
-      "latest_date": "2026-01",
-      "mom_change": -0.08,
-      "yoy_change": 2.8,
+      "latest_value": 3.8,
+      "latest_date": "2026-04",
+      "mom_change": 0.24,
+      "yoy_change": 3.8,
       "is_yoy_computed": true,
       "history": [
-        {
-          "date": "2021-02",
-          "value": 1.84
-        },
-        {
-          "date": "2021-03",
-          "value": 2.67
-        },
-        {
-          "date": "2021-04",
-          "value": 3.64
-        },
         {
           "date": "2021-05",
           "value": 4.07
@@ -13060,6 +13052,18 @@
         {
           "date": "2026-01",
           "value": 2.83
+        },
+        {
+          "date": "2026-02",
+          "value": 2.86
+        },
+        {
+          "date": "2026-03",
+          "value": 3.53
+        },
+        {
+          "date": "2026-04",
+          "value": 3.77
         }
       ]
     },
@@ -13071,24 +13075,12 @@
       "source": "BEA",
       "unit": "",
       "good_direction": "down",
-      "latest_value": 3.1,
-      "latest_date": "2026-01",
+      "latest_value": 3.3,
+      "latest_date": "2026-04",
       "mom_change": 0.05,
-      "yoy_change": 3.1,
+      "yoy_change": 3.3,
       "is_yoy_computed": true,
       "history": [
-        {
-          "date": "2021-02",
-          "value": 1.71
-        },
-        {
-          "date": "2021-03",
-          "value": 2.2
-        },
-        {
-          "date": "2021-04",
-          "value": 3.13
-        },
         {
           "date": "2021-05",
           "value": 3.54
@@ -13316,6 +13308,18 @@
         {
           "date": "2026-01",
           "value": 3.06
+        },
+        {
+          "date": "2026-02",
+          "value": 3.03
+        },
+        {
+          "date": "2026-03",
+          "value": 3.24
+        },
+        {
+          "date": "2026-04",
+          "value": 3.29
         }
       ]
     },
@@ -13327,24 +13331,12 @@
       "source": "BLS",
       "unit": "",
       "good_direction": "down",
-      "latest_value": 3.2,
-      "latest_date": "2026-02",
-      "mom_change": 1.26,
-      "yoy_change": 3.2,
+      "latest_value": 13.1,
+      "latest_date": "2026-05",
+      "mom_change": 3.67,
+      "yoy_change": 13.1,
       "is_yoy_computed": true,
       "history": [
-        {
-          "date": "2021-03",
-          "value": 11.34
-        },
-        {
-          "date": "2021-04",
-          "value": 17.47
-        },
-        {
-          "date": "2021-05",
-          "value": 19.25
-        },
         {
           "date": "2021-06",
           "value": 19.72
@@ -13572,6 +13564,18 @@
         {
           "date": "2026-02",
           "value": 3.22
+        },
+        {
+          "date": "2026-03",
+          "value": 6.75
+        },
+        {
+          "date": "2026-04",
+          "value": 9.41
+        },
+        {
+          "date": "2026-05",
+          "value": 13.08
         }
       ]
     },
@@ -13583,20 +13587,12 @@
       "source": "Federal Reserve",
       "unit": "%",
       "good_direction": "down",
-      "latest_value": 4.33,
-      "latest_date": "2026-04",
+      "latest_value": 4.48,
+      "latest_date": "2026-06",
       "mom_change": 0.03,
-      "yoy_change": -0.08,
+      "yoy_change": 0.11,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-05",
-          "value": 1.58
-        },
-        {
-          "date": "2021-06",
-          "value": 1.45
-        },
         {
           "date": "2021-07",
           "value": 1.24
@@ -13827,7 +13823,15 @@
         },
         {
           "date": "2026-04",
-          "value": 4.33
+          "value": 4.4
+        },
+        {
+          "date": "2026-05",
+          "value": 4.45
+        },
+        {
+          "date": "2026-06",
+          "value": 4.48
         }
       ]
     },
@@ -13839,20 +13843,12 @@
       "source": "Federal Reserve",
       "unit": "%",
       "good_direction": "down",
-      "latest_value": 3.81,
-      "latest_date": "2026-04",
-      "mom_change": 0.02,
-      "yoy_change": -0.08,
+      "latest_value": 4.09,
+      "latest_date": "2026-06",
+      "mom_change": 0.11,
+      "yoy_change": 0.15,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-05",
-          "value": 0.14
-        },
-        {
-          "date": "2021-06",
-          "value": 0.25
-        },
         {
           "date": "2021-07",
           "value": 0.19
@@ -14083,7 +14079,15 @@
         },
         {
           "date": "2026-04",
-          "value": 3.81
+          "value": 3.88
+        },
+        {
+          "date": "2026-05",
+          "value": 3.98
+        },
+        {
+          "date": "2026-06",
+          "value": 4.09
         }
       ]
     },
@@ -14095,20 +14099,12 @@
       "source": "Federal Reserve",
       "unit": "%",
       "good_direction": "up",
-      "latest_value": 0.5,
-      "latest_date": "2026-04",
-      "mom_change": -0.01,
-      "yoy_change": -0.02,
+      "latest_value": 0.4,
+      "latest_date": "2026-06",
+      "mom_change": -0.07,
+      "yoy_change": -0.03,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-05",
-          "value": 1.44
-        },
-        {
-          "date": "2021-06",
-          "value": 1.2
-        },
         {
           "date": "2021-07",
           "value": 1.05
@@ -14339,7 +14335,15 @@
         },
         {
           "date": "2026-04",
-          "value": 0.5
+          "value": 0.52
+        },
+        {
+          "date": "2026-05",
+          "value": 0.47
+        },
+        {
+          "date": "2026-06",
+          "value": 0.4
         }
       ]
     },
@@ -14351,16 +14355,12 @@
       "source": "Federal Reserve / SLOOS",
       "unit": "%",
       "good_direction": "down",
-      "latest_value": 5.3,
-      "latest_date": "2026-01",
-      "mom_change": -1.2,
-      "yoy_change": -0.9,
+      "latest_value": 8.1,
+      "latest_date": "2026-04",
+      "mom_change": 2.8,
+      "yoy_change": -10.4,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2011-04",
-          "value": -16.4
-        },
         {
           "date": "2011-07",
           "value": -21.8
@@ -14596,6 +14596,10 @@
         {
           "date": "2026-01",
           "value": 5.3
+        },
+        {
+          "date": "2026-04",
+          "value": 8.1
         }
       ]
     },
@@ -14607,10 +14611,10 @@
       "source": "Federal Reserve / SLOOS",
       "unit": "%",
       "good_direction": "down",
-      "latest_value": 8.3,
-      "latest_date": "2026-01",
-      "mom_change": 2.0,
-      "yoy_change": -0.8,
+      "latest_value": 6.3,
+      "latest_date": "2026-04",
+      "mom_change": -2.0,
+      "yoy_change": 6.3,
       "is_yoy_computed": false,
       "history": [
         {
@@ -14840,6 +14844,10 @@
         {
           "date": "2026-01",
           "value": 8.3
+        },
+        {
+          "date": "2026-04",
+          "value": 6.3
         }
       ]
     },
@@ -14851,20 +14859,12 @@
       "source": "ICE / BofA",
       "unit": "%",
       "good_direction": "down",
-      "latest_value": 3.12,
-      "latest_date": "2026-04",
-      "mom_change": -0.16,
+      "latest_value": 2.66,
+      "latest_date": "2026-06",
+      "mom_change": -0.08,
       "yoy_change": -0.2,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-05",
-          "value": 3.34
-        },
-        {
-          "date": "2021-06",
-          "value": 3.04
-        },
         {
           "date": "2021-07",
           "value": 3.32
@@ -15095,7 +15095,15 @@
         },
         {
           "date": "2026-04",
-          "value": 3.12
+          "value": 2.83
+        },
+        {
+          "date": "2026-05",
+          "value": 2.74
+        },
+        {
+          "date": "2026-06",
+          "value": 2.66
         }
       ]
     },
@@ -15107,20 +15115,12 @@
       "source": "U. Michigan",
       "unit": "",
       "good_direction": "up",
-      "latest_value": -12.5,
-      "latest_date": "2026-02",
-      "mom_change": 8.82,
-      "yoy_change": -12.5,
+      "latest_value": -4.6,
+      "latest_date": "2026-04",
+      "mom_change": 1.89,
+      "yoy_change": -4.6,
       "is_yoy_computed": true,
       "history": [
-        {
-          "date": "2021-03",
-          "value": -4.71
-        },
-        {
-          "date": "2021-04",
-          "value": 22.98
-        },
         {
           "date": "2021-05",
           "value": 14.66
@@ -15352,6 +15352,14 @@
         {
           "date": "2026-02",
           "value": -12.52
+        },
+        {
+          "date": "2026-03",
+          "value": -6.49
+        },
+        {
+          "date": "2026-04",
+          "value": -4.6
         }
       ]
     },
@@ -15619,20 +15627,12 @@
       "source": "Federal Reserve",
       "unit": "%",
       "good_direction": "down",
-      "latest_value": 3.64,
-      "latest_date": "2026-03",
-      "mom_change": 0.0,
-      "yoy_change": -0.69,
+      "latest_value": 3.63,
+      "latest_date": "2026-05",
+      "mom_change": -0.01,
+      "yoy_change": -0.7,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-04",
-          "value": 0.07
-        },
-        {
-          "date": "2021-05",
-          "value": 0.06
-        },
         {
           "date": "2021-06",
           "value": 0.08
@@ -15864,6 +15864,14 @@
         {
           "date": "2026-03",
           "value": 3.64
+        },
+        {
+          "date": "2026-04",
+          "value": 3.64
+        },
+        {
+          "date": "2026-05",
+          "value": 3.63
         }
       ]
     },
@@ -15875,20 +15883,12 @@
       "source": "Federal Reserve",
       "unit": "%",
       "good_direction": "down",
-      "latest_value": 2.33,
-      "latest_date": "2026-04",
-      "mom_change": 0.03,
-      "yoy_change": -0.01,
+      "latest_value": 2.32,
+      "latest_date": "2026-06",
+      "mom_change": -0.06,
+      "yoy_change": -0.07,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-05",
-          "value": 2.42
-        },
-        {
-          "date": "2021-06",
-          "value": 2.32
-        },
         {
           "date": "2021-07",
           "value": 2.4
@@ -16119,7 +16119,15 @@
         },
         {
           "date": "2026-04",
-          "value": 2.33
+          "value": 2.46
+        },
+        {
+          "date": "2026-05",
+          "value": 2.38
+        },
+        {
+          "date": "2026-06",
+          "value": 2.32
         }
       ]
     },
@@ -16131,20 +16139,12 @@
       "source": "Freddie Mac",
       "unit": "%",
       "good_direction": "down",
-      "latest_value": 6.46,
-      "latest_date": "2026-04",
-      "mom_change": 0.08,
-      "yoy_change": -0.43,
+      "latest_value": 6.52,
+      "latest_date": "2026-06",
+      "mom_change": -0.01,
+      "yoy_change": -0.2,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-05",
-          "value": 2.95
-        },
-        {
-          "date": "2021-06",
-          "value": 3.02
-        },
         {
           "date": "2021-07",
           "value": 2.8
@@ -16375,7 +16375,15 @@
         },
         {
           "date": "2026-04",
-          "value": 6.46
+          "value": 6.3
+        },
+        {
+          "date": "2026-05",
+          "value": 6.53
+        },
+        {
+          "date": "2026-06",
+          "value": 6.52
         }
       ]
     },
@@ -16387,24 +16395,12 @@
       "source": "DOL / ETA",
       "unit": "K",
       "good_direction": "down",
-      "latest_value": 202000.0,
-      "latest_date": "2026-03",
-      "mom_change": -12000.0,
-      "yoy_change": -37000.0,
+      "latest_value": 229000.0,
+      "latest_date": "2026-06",
+      "mom_change": 4000.0,
+      "yoy_change": 10000.0,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-04",
-          "value": 574000.0
-        },
-        {
-          "date": "2021-05",
-          "value": 427000.0
-        },
-        {
-          "date": "2021-06",
-          "value": 368000.0
-        },
         {
           "date": "2021-07",
           "value": 379000.0
@@ -16632,6 +16628,18 @@
         {
           "date": "2026-03",
           "value": 202000.0
+        },
+        {
+          "date": "2026-04",
+          "value": 190000.0
+        },
+        {
+          "date": "2026-05",
+          "value": 225000.0
+        },
+        {
+          "date": "2026-06",
+          "value": 229000.0
         }
       ]
     },
@@ -16643,20 +16651,12 @@
       "source": "DOL / ETA",
       "unit": "M",
       "good_direction": "down",
-      "latest_value": 1841.0,
-      "latest_date": "2026-03",
-      "mom_change": -6.0,
-      "yoy_change": -35.0,
+      "latest_value": 1795.0,
+      "latest_date": "2026-05",
+      "mom_change": 37.0,
+      "yoy_change": -157.0,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-04",
-          "value": 3767.0
-        },
-        {
-          "date": "2021-05",
-          "value": 3422.0
-        },
         {
           "date": "2021-06",
           "value": 3313.0
@@ -16887,7 +16887,15 @@
         },
         {
           "date": "2026-03",
-          "value": 1841.0
+          "value": 1787.0
+        },
+        {
+          "date": "2026-04",
+          "value": 1758.0
+        },
+        {
+          "date": "2026-05",
+          "value": 1795.0
         }
       ]
     },
@@ -16899,20 +16907,12 @@
       "source": "EIA",
       "unit": "$",
       "good_direction": "down",
-      "latest_value": 114.01,
-      "latest_date": "2026-04",
-      "mom_change": 11.15,
-      "yoy_change": 52.55,
+      "latest_value": 95.0,
+      "latest_date": "2026-06",
+      "mom_change": 3.84,
+      "yoy_change": 24.64,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-05",
-          "value": 66.31
-        },
-        {
-          "date": "2021-06",
-          "value": 73.52
-        },
         {
           "date": "2021-07",
           "value": 73.93
@@ -17143,7 +17143,15 @@
         },
         {
           "date": "2026-04",
-          "value": 114.01
+          "value": 108.64
+        },
+        {
+          "date": "2026-05",
+          "value": 91.16
+        },
+        {
+          "date": "2026-06",
+          "value": 95.0
         }
       ]
     },
@@ -17155,20 +17163,12 @@
       "source": "CBOE",
       "unit": "",
       "good_direction": "down",
-      "latest_value": 4.4,
-      "latest_date": "2026-04",
-      "mom_change": -8.96,
-      "yoy_change": 4.4,
+      "latest_value": -3.2,
+      "latest_date": "2026-06",
+      "mom_change": 14.33,
+      "yoy_change": -3.2,
       "is_yoy_computed": true,
       "history": [
-        {
-          "date": "2021-05",
-          "value": -39.08
-        },
-        {
-          "date": "2021-06",
-          "value": -47.98
-        },
         {
           "date": "2021-07",
           "value": -25.43
@@ -17399,7 +17399,15 @@
         },
         {
           "date": "2026-04",
-          "value": 4.37
+          "value": -31.62
+        },
+        {
+          "date": "2026-05",
+          "value": -17.5
+        },
+        {
+          "date": "2026-06",
+          "value": -3.17
         }
       ]
     },
@@ -17411,24 +17419,12 @@
       "source": "U.S. Treasury",
       "unit": "B",
       "good_direction": "up",
-      "latest_value": -307.5,
-      "latest_date": "2026-02",
-      "mom_change": -212.89,
-      "yoy_change": -146.97,
+      "latest_value": -292.65,
+      "latest_date": "2026-05",
+      "mom_change": -507.67,
+      "yoy_change": -319.66,
       "is_yoy_computed": false,
       "history": [
-        {
-          "date": "2021-03",
-          "value": -659.59
-        },
-        {
-          "date": "2021-04",
-          "value": -225.58
-        },
-        {
-          "date": "2021-05",
-          "value": -131.95
-        },
         {
           "date": "2021-06",
           "value": -174.16
@@ -17656,6 +17652,18 @@
         {
           "date": "2026-02",
           "value": -307.5
+        },
+        {
+          "date": "2026-03",
+          "value": -164.1
+        },
+        {
+          "date": "2026-04",
+          "value": 215.02
+        },
+        {
+          "date": "2026-05",
+          "value": -292.65
         }
       ]
     },
