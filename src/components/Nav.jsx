@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { label: "Insights",      to: "/insights" },
   { label: "Analysis",      to: "/research" },
   { label: "About",         to: "/about" },
+  { label: "Contact",       to: "/contact" },
 ];
 
 export default function Nav() {

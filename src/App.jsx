@@ -7,6 +7,7 @@ import Insights from "./pages/Insights.jsx";
 import Research from "./pages/Research.jsx";
 import AILaborMarket from "./pages/research/AILaborMarket.jsx";
 import About from "./pages/About.jsx";
+import Contact from "./pages/Contact.jsx";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/research"                element={<Research />} />
         <Route path="/research/ai-labor-market" element={<AILaborMarket />} />
         <Route path="/about"                    element={<About />} />
+        <Route path="/contact"                  element={<Contact />} />
       </Routes>
     </>
   );
