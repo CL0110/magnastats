@@ -24,7 +24,7 @@ export default function Nav() {
       }}>
         {/* Wordmark */}
         <NavLink to="/" style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <img src={import.meta.env.BASE_URL + "favicon.svg"} alt="" style={{ width: 22, height: 22 }} />
+          <img src={import.meta.env.BASE_URL + "favicon.jpg"} alt="" style={{ width: 22, height: 22 }} />
           <span style={{
             fontFamily: "'Playfair Display', serif",
             fontSize: 18, fontWeight: 700,
